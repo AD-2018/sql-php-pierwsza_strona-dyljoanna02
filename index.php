@@ -8,6 +8,9 @@ $password = "lollol92589@";
 $dbname = "joannadyl_sql";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 $sql = "SELECT * FROM pracownicy";
 echo("<h3>ZADANIE 1</h3>");
 echo("<li>".$sql."<br><br>");
