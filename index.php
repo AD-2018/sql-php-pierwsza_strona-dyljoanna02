@@ -2,6 +2,8 @@
 echo("<h1>Hello World</h1>");
 echo("<h1>Jestem Joanna Dyl</h1>");
 
+require("connect.php");
+
 $sql = "SELECT * FROM pracownicy";
 echo("<h3>ZADANIE 1</h3>");
 echo("<li>".$sql."<br><br>");
