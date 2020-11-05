@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <?php
 echo("Jestem tu: <br>funkcAgregujace.php<br>");
 
@@ -103,3 +110,5 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
 ?>
+     </body>
+</html>
