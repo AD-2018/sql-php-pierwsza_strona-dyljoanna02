@@ -5,12 +5,12 @@ table {
   border-collapse: collapse;
 }
 body {
-  background-color: lightblue;
+  background-color: #3333ff;
 }
 th, td {
   padding: 8px;
   text-align: center;
 }
 th {
-  color: cyan; 
+  background-color: cyan; 
 }
