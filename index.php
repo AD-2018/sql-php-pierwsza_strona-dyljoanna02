@@ -91,7 +91,7 @@ while($row = mysqli_fetch_assoc($result)) {
 echo ('</table>');
     
 $sql = "SELECT imie,zarobki,data_urodzenia,nazwa_dzial FROM pracownicy,organizacja WHERE id_org=dzial AND zarobki<30";
-echo("<h3>ZADANIE 4</h3>");
+echo("<h3>ZADANIE 5</h3>");
 echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
