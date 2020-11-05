@@ -7,3 +7,10 @@ table {
 body {
   background-color: lightblue;
 }
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+th {
+  color: cyan; 
+}
