@@ -6,7 +6,7 @@
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a>
 <?php
-echo("<h1>Jestem Joanna Dyl nr 4</h1>");
+echo("<h1>Joanna Dyl nr 4</h1>");
 
 require_once "connect.php";
 
