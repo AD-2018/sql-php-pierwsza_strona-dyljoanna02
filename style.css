@@ -8,8 +8,8 @@ body {
   background-color: lightblue;
 }
 th, td {
-  padding: 15px;
-  text-align: left;
+  padding: 8px;
+  text-align: center;
 }
 th {
   color: cyan; 
