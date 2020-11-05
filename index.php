@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a>
 <?php
 echo("<h1>Hello World</h1>");
 echo("<h1>Jestem Joanna Dyl</h1>");
@@ -20,3 +27,6 @@ while($row = mysqli_fetch_assoc($result)) {
 echo ('</table>');
 
 ?>
+
+</body>
+</html>
