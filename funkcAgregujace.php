@@ -5,7 +5,7 @@
 </head>
 <body>
      <div>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/>
+    <a href="https://dyljoanna.herokuapp.com/">Strona glowna</a><br/>
     <a href="orgPracownicy.php">orgPracownicy.php</a><br/>
     </div>
 
