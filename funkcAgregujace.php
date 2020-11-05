@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+     <div>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/>
+    <a href="orgPracownicy.php">orgPracownicy.php</a><br/>
+    </div>
 
 <?php
 echo("Jestem tu: <br>funkcAgregujace.php<br>");
