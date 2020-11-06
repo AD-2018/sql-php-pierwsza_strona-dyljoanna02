@@ -10,7 +10,7 @@
     </div>
 
 <?php
-echo("Jestem tu: <br>funkcAgregujace.php<br>");
+echo("Jestem tu: <br>Funkcje Agregujace<br>");
 
 require_once "connect.php";
 
