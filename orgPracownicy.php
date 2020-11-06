@@ -175,7 +175,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
      
-$sql = "SELECT imie,zarobki,nazwa_dzial FROM pracownicy,organizacja WHERE (id_org=dzial) AND (imie NOT LIKE '%a') ORDER BY nazwa_dial asc AND zarobki asc";
+$sql = "SELECT imie,zarobki,nazwa_dzial FROM pracownicy,organizacja WHERE (id_org=dzial) AND (imie NOT LIKE '%a') ORDER BY nazwa_dial asc, zarobki asc";
 echo("<h3>ZADANIE 5</h3>");
 echo("<li>".$sql."<br><br>");
 
