@@ -135,7 +135,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
      
-$sql = "SELECT imie,nazwa_dzial FROM pracownicy,organizacja WHERE id_org=dzial WHERE imie LIKE '%a' ORDER BY imie asc";
+$sql = "SELECT imie,nazwa_dzial FROM pracownicy,organizacja WHERE id_org=dzial AND imie LIKE '%a' ORDER BY imie asc";
 echo("<h3>ZADANIE 3</h3>");
 echo("<li>".$sql."<br><br>");
 
