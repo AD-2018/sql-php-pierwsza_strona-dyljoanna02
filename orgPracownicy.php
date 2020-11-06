@@ -10,7 +10,7 @@
     </div>
 
 <?php
-echo("Jestem tu: <br/>orgPracownicy.php<br/>");
+echo("Jestem tu: <br/>Pracownicy i Organizacja<br/>");
      require_once "connect.php";
 
 $sql = "SELECT imie,nazwa_dzial FROM pracownicy,organizacja WHERE id_org=dzial";
