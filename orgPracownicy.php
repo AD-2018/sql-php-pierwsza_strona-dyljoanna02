@@ -236,7 +236,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
      
-$sql = "SELECT imie,data_urodzenia,nazwa_dzial FROM pracownicy,organizacja WHERE id_org=dzial ORDER BY nazwa_dzial desc LIMIT 1";
+$sql = "SELECT imie,data_urodzenia,nazwa_dzial FROM pracownicy,organizacja WHERE id_org=dzial ORDER BY nazwa_dzial asc LIMIT 1";
 echo("<h3>ZADANIE 3</h3>");
 echo("<li>".$sql."<br><br>");
 
