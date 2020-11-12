@@ -276,7 +276,7 @@ while($row = mysqli_fetch_assoc($result)) {
 echo ('</table>');
      echo("<h2>HAVING</h2>");
      
-$sql = "SELECT nazwa_dzial,sum(zarobki) as suma FROM pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+$sql = "SELECT nazwa_dzial,srednia(zarobki) as srednia FROM pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial HAVING srednia<28";
 echo("<h3>ZADANIE 1</h3>");
 echo("<li>".$sql."<br><br>");
 
@@ -288,10 +288,10 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>suma</th><th>nazwa_dzial</th></tr>");
+echo ("<tr><th>srednia</th><th>nazwa_dzial</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['suma']."</td><td>".$row['nazwa_dzial']."</td>");
+    echo ("<td>".$row['srednia']."</td><td>".$row['nazwa_dzial']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
