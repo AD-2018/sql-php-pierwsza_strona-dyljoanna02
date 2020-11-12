@@ -288,10 +288,10 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>srednia</th><th>nazwa_dzial</th></tr>");
+echo ("<tr><th>suma</th><th>nazwa_dzial</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['srednia']."</td><td>".$row['nazwa_dzial']."</td>");
+    echo ("<td>".$row['suma']."</td><td>".$row['nazwa_dzial']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
