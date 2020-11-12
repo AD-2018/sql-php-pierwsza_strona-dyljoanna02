@@ -274,6 +274,27 @@ while($row = mysqli_fetch_assoc($result)) {
     echo ('</tr>');
 }
 echo ('</table>');
+     echo("<h2>HAVING</h2>");
+     
+$sql = "SELECT nazwa_dzial,sum(zarobki) as suma FROM pracownicy,organizacja WHERE id_org=dzial HAVING suma<28 GROUP BY dzial";
+echo("<h3>ZADANIE 1</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>srednia</th><th>nazwa_dzial</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+    echo ("<td>".$row['srednia']."</td><td>".$row['nazwa_dzial']."</td>");
+    echo ('</tr>');
+}
+echo ('</table>');
 ?>
      </body>
 </html>
