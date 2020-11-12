@@ -155,7 +155,7 @@ while($row = mysqli_fetch_assoc($result)) {
 echo ('</table>');
      
 $sql = "SELECT count(imie) as liczba_pracownikow FROM pracownicy WHERE imie LIKE '%a' AND (dzial=1 OR dzial=3)";
-echo("<h3>ZADANIE 7</h3>");
+echo("<h3>ZADANIE 8</h3>");
 echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
@@ -170,6 +170,27 @@ echo ("<tr><th>liczba_pracownikow</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
     echo ("<td>".$row['liczba_pracownikow']."</td>");
+    echo ('</tr>');
+}
+echo ('</table>');
+     echo("<h2>GROUP BY</h2>");
+
+$sql = "SELECT nazwa_dzial,sum(zarobki) as suma FROM pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
+echo("<h3>ZADANIE 1</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>suma</th><th>nazwa_dzial</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+    echo ("<td>".$row['suma']."</td><td>".$row['nazwa_dzial']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
