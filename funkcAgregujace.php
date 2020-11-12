@@ -296,7 +296,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
      
-$sql = "SELECT nazwa_dzial,avg(zarobki) as srednia FROM pracownicy,organizacja WHERE id_org=dzial AND imie NOT LIKE '%a' GROUP BY dzial HAVING srednia<30";
+$sql = "SELECT nazwa_dzial,avg(zarobki) as srednia FROM pracownicy,organizacja WHERE id_org=dzial AND imie NOT LIKE '%a' GROUP BY dzial HAVING srednia>30";
 echo("<h3>ZADANIE 2</h3>");
 echo("<li>".$sql."<br><br>");
 
