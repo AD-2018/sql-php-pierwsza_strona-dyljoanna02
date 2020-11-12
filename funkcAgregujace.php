@@ -235,8 +235,8 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
      
-$sql = "SELECT sum(zarobki) as suma, if((imie LIKE '%a;), 'Kobiety', 'Mezczyzni') as plec FROM pracownicy GROUP BY plec";
-echo("<h3>ZADANIE 5</h3>");
+$sql = "SELECT sum(zarobki) as suma, if((imie LIKE '%a'), 'Kobiety', 'Mezczyzni') as plec FROM pracownicy GROUP BY plec";
+echo("<h3>ZADANIE 4</h3>");
 echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
