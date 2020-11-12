@@ -276,7 +276,7 @@ while($row = mysqli_fetch_assoc($result)) {
 echo ('</table>');
      echo("<h2>HAVING</h2>");
      
-$sql = "SELECT nazwa_dzial,srednia(zarobki) as srednia FROM pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial HAVING srednia<28";
+$sql = "SELECT nazwa_dzial,avg(zarobki) as srednia FROM pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial HAVING srednia<28";
 echo("<h3>ZADANIE 1</h3>");
 echo("<li>".$sql."<br><br>");
 
