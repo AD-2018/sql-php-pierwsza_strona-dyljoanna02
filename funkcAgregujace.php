@@ -254,6 +254,26 @@ while($row = mysqli_fetch_assoc($result)) {
     echo ('</tr>');
 }
 echo ('</table>');
+     
+$sql = "SELECT avg(zarobki) as srednia, if((imie LIKE '%a'), 'Kobiety', 'Mezczyzni') as plec FROM pracownicy GROUP BY plec";
+echo("<h3>ZADANIE 5</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>plec</th><th>srednia</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+    echo ("<td>".$row['plec']."</td><td>".$row['srednia']."</td>");
+    echo ('</tr>');
+}
+echo ('</table>');
 ?>
      </body>
 </html>
