@@ -114,6 +114,26 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
+$sql = "SELECT sum(YEAR(curdate())-YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie NOT LIKE '%a'";
+echo("<h3>ZADANIE 6</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>wiek</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+    echo ("<td>".$row['wiek']."</td>");
+    echo ('</tr>');
+}
+echo ('</table>');
+    
 ?>
 
 </body>
