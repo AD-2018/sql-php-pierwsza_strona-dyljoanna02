@@ -13,6 +13,7 @@
 echo("Jestem tutaj: <br>Data i Czas</br>");
     
     require_once "connect.php";
+    SET lc_time_names = 'pl_PL';
     
 $sql = "SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy";
 echo("<h3>ZADANIE 2</h3>");
@@ -294,7 +295,7 @@ while($row = mysqli_fetch_assoc($result)) {
     echo ('</tr>');
 }
 echo ('</table>');
-    SET lc_time_names = 'pl_PL';
+
 $sql = "SELECT DATE_FORMAT(curdate(),'%W') as dzien;";
 echo("<h3>ZADANIE 2</h3>");
 echo("<li>".$sql."<br><br>");
