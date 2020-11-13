@@ -299,7 +299,7 @@ echo ('</table>');
 echo("<h3> ZAD 2 </h3>");
     $sql1 = "SET lc_time_names = 'pl_PL'";
     $sql2 ="SELECT DATE_FORMAT(CURDATE(), '%W')as data";
-    echo ("<li>".$sql."</li><br><br>");
+    echo ("<li>".$sql2."</li><br><br>");
     $result = mysqli_query($conn, $sql1);
     $result = mysqli_query($conn, $sql2);
     echo ('<table border = "1" class = "moja_tabelka">');
