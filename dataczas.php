@@ -414,7 +414,7 @@ echo('<table border="1">');
 
 echo('</table>');
     
-$sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, imie
+$sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, imie,dzial
 FROM
      pracownicy
 ORDER BY 
@@ -439,10 +439,10 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>imie</th><th>dzien</th></tr>");
+echo ("<tr><th>imie</th><th>dzien</th><th>dzial</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['imie']."</td><td>".$row['dzien']."</td>");
+    echo ("<td>".$row['imie']."</td><td>".$row['dzien']."</td><td>".$row['dzial']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
