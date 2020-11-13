@@ -14,7 +14,7 @@ echo("Jestem tutaj: <br>Data i Czas</br>");
     
     require_once "connect.php";
     
-$sql = "SELECT *, YEAR(curdate()-YEAR(data_urodzenia) as wiek FROM pracownicy";
+$sql = "SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy";
 echo("<h3>ZADANIE 1</h3>");
 echo("<li>".$sql."<br><br>");
 
