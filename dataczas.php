@@ -332,7 +332,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT curtime(4) as czas from pracownicy;";
+$sql = "SELECT curtime(4) as czas";
 echo("<h3>ZADANIE 4</h3>");
 echo("<li>".$sql."<br><br>");
 
