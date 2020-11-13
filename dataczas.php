@@ -194,7 +194,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT nazwa_dzial,min(YEAR(curdate())-YEAR(data_urodzenia)) as wiek FROM pracownicy,organizacja WHERE id_org=dzial AND (nazwa_dzial='handel' OR nazwa_dzial='serwis')";
+$sql = "SELECT nazwa_dzial,min(YEAR(curdate())-YEAR(data_urodzenia)) as wiek FROM pracownicy,organizacja WHERE id_org=dzial AND (nazwa_dzial='handel' OR nazwa_dzial='serwis') GROUP BY dzial";
 echo("<h3>ZADANIE 10</h3>");
 echo("<li>".$sql."<br><br>");
 
