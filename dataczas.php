@@ -54,7 +54,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
 
-$sql = "SELECT YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy";
+$sql = "SELECT sum(YEAR(curdate())-YEAR(data_urodzenia)) as wiek FROM pracownicy";
 echo("<h3>ZADANIE 3</h3>");
 echo("<li>".$sql."<br><br>");
 
