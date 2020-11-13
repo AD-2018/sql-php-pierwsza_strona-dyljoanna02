@@ -414,16 +414,20 @@ echo('<table border="1">');
 
 echo('</table>');
     
-$sql = "SELECT imie,zarobki,dzial, DATE_FORMAT(data_urodzenia,'%W') as dzien from pracownicy ORDER BY
-CASE   
-          WHEN dzien = 'Monday' THEN 1
-          WHEN dzien = 'Tuesday' THEN 2
-          WHEN dzien = 'Wednesday' THEN 3
-          WHEN dzien= 'Thursday' THEN 4
-          WHEN dzien = 'Friday' THEN 5
-          WHEN dzien = 'Saturday' THEN 6
-          WHEN dzien = 'Sunday' THEN 7
-     END ASC;";
+$sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, imie
+FROM
+     pracownicy
+ORDER BY 
+     CASE
+          
+          WHEN dzien = 'Poniedziałek' THEN 1
+          WHEN dzien = 'Wtorek' THEN 2
+          WHEN dzien = 'Środa' THEN 3
+          WHEN dzien= 'Czwartek' THEN 4
+          WHEN dzien = 'Piątek' THEN 5
+          WHEN dzien = 'Sobota' THEN 6
+          WHEN dzien = 'Niedziela' THEN 7
+     END ASC";
 echo("<h3>ZADANIE 8</h3>");
 echo("<li>".$sql."<br><br>");
 
@@ -435,10 +439,10 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>imie</th><th>zarobki</th><th>dzien</th><th>dzial</th></tr>");
+echo ("<tr><th>imie</th><th>dzien</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['dzien']."</td><td>".$row['dzial']."</td>");
+    echo ("<td>".$row['imie']."</td><td>".$row['dzien']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
