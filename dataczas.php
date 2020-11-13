@@ -387,7 +387,7 @@ echo('<table border="1" class="tabelka_moja">');
 echo ("<tr><th>dni</th><th>godziny</th><th>minuty</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['czas']."</td>");
+    echo ("<td>".$row['dni']."</td><td>".$row['godziny']."</td><td>".$row['minuty']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
