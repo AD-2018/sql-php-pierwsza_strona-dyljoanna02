@@ -392,25 +392,27 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT DATE_FORMAT("2002-04-23", "%j") as urodz";
 echo("<h3>ZADANIE 7</h3>");
-echo("<li>".$sql."<br><br>");
+$sql = 'SELECT DATE_FORMAT("2002-04-23", "%j") as urodz';
+echo($sql);
 
 $result = mysqli_query($conn, $sql);
-     if ( $result) {
+if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>nr_dnia_roku-urodzenie</th></tr>");
-while($row = mysqli_fetch_assoc($result)) {
-    echo ('<tr>');
-    echo ("<td>".$row['urodz']."</td>");
-    echo ('</tr>');
-}
-echo ('</table>');
+echo('<table border="1">');
+    echo('<th>Data_urodzenia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['urodz'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
 ?>
 
 </body>
