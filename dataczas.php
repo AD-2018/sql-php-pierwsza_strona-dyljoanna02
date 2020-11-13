@@ -174,7 +174,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT nazwa_dzial,YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial ORDER BY wiek desc LIMIT 4";
+$sql = "SELECT nazwa_dzial,max(YEAR(curdate())-YEAR(data_urodzenia)) as wiek FROM pracownicy,organizacja WHERE id_org=dzial GROUP BY dzial";
 echo("<h3>ZADANIE 9</h3>");
 echo("<li>".$sql."<br><br>");
 
