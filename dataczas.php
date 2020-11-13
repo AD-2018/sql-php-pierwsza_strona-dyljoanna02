@@ -467,15 +467,15 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as dzien FROM pracownicy ORDER BY 
+$sql = "SELECT count(DATE_FORMAT(data_urodzenia, '%W')) as dzien, (DATE_FORMAT(data_urodzenia, '%W')) as dni from pracownicy, organizacja WHERE id_org=dzial GROUP BY dni ORDER BY 
      CASE 
-          WHEN dzien = 'Monday' THEN 1
-          WHEN dzien = 'Tuesday' THEN 2
-          WHEN dzien = 'Wednesday' THEN 3
-          WHEN dzien= 'Thursday' THEN 4
-          WHEN dzien = 'Friday' THEN 5
-          WHEN dzien = 'Saturday' THEN 6
-          WHEN dzien = 'Sunday' THEN 7
+          WHEN dzien = 'Poniedziałek' THEN 1
+          WHEN dzien = 'Wtorek' THEN 2
+          WHEN dzien = 'Środa' THEN 3
+          WHEN dzien= 'Czwartek' THEN 4
+          WHEN dzien = 'Piątek' THEN 5
+          WHEN dzien = 'Sobota' THEN 6
+          WHEN dzien = 'Niedziela' THEN 7
      END ASC";
 echo("<h3>ZADANIE 10</h3>");
 echo("<li>".$sql."<br><br>");
@@ -488,10 +488,10 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>dzien</th></tr>");
+echo ("<tr><th>dzien</th><th>dni</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['dzien']."</td></td>");
+    echo ("<td>".$row['dzien']."</td><td>".$row['dni']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
