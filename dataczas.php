@@ -16,7 +16,7 @@ echo("Jestem tutaj: <br>Data i Czas</br>");
     
     
 $sql = "SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy";
-echo("<h3>ZADANIE 2</h3>");
+echo("<h3>ZADANIE 1</h3>");
 echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
@@ -36,7 +36,7 @@ while($row = mysqli_fetch_assoc($result)) {
 echo ('</table>');
     
 $sql = "SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy,organizacja WHERE id_org=dzial AND nazwa_dzial='serwis'";
-echo("<h3>ZADANIE 1</h3>");
+echo("<h3>ZADANIE 2</h3>");
 echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
@@ -467,7 +467,8 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT count(DATE_FORMAT(data_urodzenia, '%W')) as dzien, (DATE_FORMAT(data_urodzenia, '%W')) as dni from pracownicy, organizacja WHERE id_org=dzial GROUP BY dni ORDER BY 
+echo("<h3>Zad 10 </h3>");
+$sql = "select count(DATE_FORMAT(data_urodzenia, '%W')) as dzien, (DATE_FORMAT(data_urodzenia, '%W')) as dni from pracownicy, organizacja where id_org=dzial group by dni ORDER BY 
      CASE 
           WHEN dzien = 'Poniedziałek' THEN 1
           WHEN dzien = 'Wtorek' THEN 2
@@ -477,24 +478,25 @@ $sql = "SELECT count(DATE_FORMAT(data_urodzenia, '%W')) as dzien, (DATE_FORMAT(d
           WHEN dzien = 'Sobota' THEN 6
           WHEN dzien = 'Niedziela' THEN 7
      END ASC";
-echo("<h3>ZADANIE 10</h3>");
-echo("<li>".$sql."<br><br>");
+echo($sql);
 
 $result = mysqli_query($conn, $sql);
-     if ( $result) {
+if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>dzien</th><th>dni</th></tr>");
-while($row = mysqli_fetch_assoc($result)) {
-    echo ('<tr>');
-    echo ("<td>".$row['dzien']."</td><td>".$row['dni']."</td>");
-    echo ('</tr>');
-}
-echo ('</table>');
+echo('<table border="1">');
+    echo('<th>Dni</th><th>Dzien</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['dni'].'</td><td>'.$row['dzien'].'</td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
 ?>
 
 </body>
