@@ -391,6 +391,26 @@ while($row = mysqli_fetch_assoc($result)) {
     echo ('</tr>');
 }
 echo ('</table>');
+    
+$sql = "SELECT DATE_FORMAT("2002-10-01", "%j") as NrDniaRoku_Urodzenie";
+echo("<h3>ZADANIE 7</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>nr dnia roku - urodzenie</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+    echo ("<td>".$row['NrDniaRoku_Urodzenie']."</td>");
+    echo ('</tr>');
+}
+echo ('</table>');
 ?>
 
 </body>
