@@ -413,6 +413,26 @@ echo('<table border="1">');
     }
 
 echo('</table>');
+    
+$sql = "SELECT imie,zarobki,dzial, DATE_FORMAT(data_urodzenia,'%W') as dzien from pracownicy ORDER BY dzien asc ;";
+echo("<h3>ZADANIE 8</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>imie</th><th>zarobki</th><th>dzien</th><th>dzial</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+    echo ("<td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['dzien']."</td><td>".$row['dzial']."</td>");
+    echo ('</tr>');
+}
+echo ('</table>');
 ?>
 
 </body>
