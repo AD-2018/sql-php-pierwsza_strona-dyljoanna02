@@ -5,8 +5,9 @@
 </head>
 <body>
      <div>
-    <a href="https://dyljoanna.herokuapp.com/">Strona glowna</a><br/>
-    <a href="orgPracownicy.php">orgPracownicy.php</a><br/>
+    <a href="https://dyljoanna.herokuapp.com/">Strona glowna</a><br/><br/>
+    <a href="orgPracownicy.php">orgPracownicy.php</a>
+    <a href="dataczas.php">Data i Czas</a><br/>
     </div>
 
 <?php
