@@ -273,7 +273,7 @@ while($row = mysqli_fetch_assoc($result)) {
     echo ('</tr>');
 }
 echo ('</table>');
-    
+    echo("<h2>FORMATOWANIE</h2>");
 ?>
 
 </body>
