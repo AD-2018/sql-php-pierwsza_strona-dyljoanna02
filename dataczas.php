@@ -13,7 +13,7 @@
 echo("Jestem tutaj: <br>Data i Czas</br>");
     
     require_once "connect.php";
-    SET lc_time_names = 'pl_PL';
+    
     
 $sql = "SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy";
 echo("<h3>ZADANIE 2</h3>");
