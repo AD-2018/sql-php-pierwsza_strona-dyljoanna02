@@ -234,7 +234,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT imie, DATEDIFF((curdate(),data_urodzenia) as dni FROM pracownicy";
+$sql = "SELECT imie, DATEDIFF(curdate(),data_urodzenia) as dni FROM pracownicy";
 echo("<h3>ZADANIE 12</h3>");
 echo("<li>".$sql."<br><br>");
 
