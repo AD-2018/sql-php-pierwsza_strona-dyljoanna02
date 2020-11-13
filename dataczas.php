@@ -447,7 +447,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT count(DATE_FORMAT(data_urodzenia, "%W")) as liczba_pracownikow FROM pracownicy WHERE DATE_FORMAT(data_urodzenia, "%W")='Poniedziałek';";
+$sql = "SELECT count(DATE_FORMAT(data_urodzenia, '%W')) as data from pracownicy, organizacja where id_org=dzial and (DATE_FORMAT(data_urodzenia, '%W')='Poniedziałek');";
 echo("<h3>ZADANIE 9</h3>");
 echo("<li>".$sql."<br><br>");
 
@@ -459,10 +459,10 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>liczba_pracownikow</th></tr>");
+echo ("<tr><th>data</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['liczba_pracownikow']."</td></td>");
+    echo ("<td>".$row['data']."</td></td>");
     echo ('</tr>');
 }
 echo ('</table>');
