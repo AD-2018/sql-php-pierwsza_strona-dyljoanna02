@@ -372,7 +372,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT DATEDIFF(CURDATE(),"23-04-2002") as dni, DATEDIFF(CURDATE(),"23-04-2002")*24 as godziny, DATEDIFF(CURDATE(),"23-04-2002")*24*60 as minuty";
+$sql = "SELECT DATEDIFF(CURDATE(),"2002-04-23") as dni, DATEDIFF(CURDATE(),"2002-04-23")*24 as godziny, DATEDIFF(CURDATE(),"2002-04-23")*24*60 as minuty";
 echo("<h3>ZADANIE 6</h3>");
 echo("<li>".$sql."<br><br>");
 
