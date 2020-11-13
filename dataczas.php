@@ -372,7 +372,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
     
-$sql = "SELECT DATEDIFF(CURDATE(),"2002-04-23") as dni, DATEDIFF(CURDATE(),"2002-04-23")*24 as godziny, DATEDIFF(CURDATE(),"2002-04-23")*24*60 as minuty";
+$sql = "SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) as dni, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty FROM pracownicy";
 echo("<h3>ZADANIE 6</h3>");
 echo("<li>".$sql."<br><br>");
 
@@ -384,10 +384,10 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>dni</th><th>godziny</th><th>minuty</th></tr>");
+echo ("<tr><th>imie</th><th>dni</th><th>godziny</th><th>minuty</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['dni']."</td><td>".$row['godziny']."</td><td>".$row['minuty']."</td>");
+    echo ("<td>".$row['imie']."</td><td>".$row['dni']."</td><td>".$row['godziny']."</td><td>".$row['minuty']."</td>");
     echo ('</tr>');
 }
 echo ('</table>');
