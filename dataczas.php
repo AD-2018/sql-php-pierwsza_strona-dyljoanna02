@@ -414,7 +414,16 @@ echo('<table border="1">');
 
 echo('</table>');
     
-$sql = "SELECT imie,zarobki,dzial, DATE_FORMAT(data_urodzenia,'%W') as dzien from pracownicy ORDER BY dzien asc ;";
+$sql = "SELECT imie,zarobki,dzial, DATE_FORMAT(data_urodzenia,'%W') as dzien from pracownicy ORDER BY
+CASE   
+          WHEN dzien = 'Monday' THEN 1
+          WHEN dzien = 'Tuesday' THEN 2
+          WHEN dzien = 'Wednesday' THEN 3
+          WHEN dzien= 'Thursday' THEN 4
+          WHEN dzien = 'Friday' THEN 5
+          WHEN dzien = 'Saturday' THEN 6
+          WHEN dzien = 'Sunday' THEN 7
+     END ASC;";
 echo("<h3>ZADANIE 8</h3>");
 echo("<li>".$sql."<br><br>");
 
