@@ -10,7 +10,8 @@
     <a href="dataczas.php">Data i Czas </a>
     <a href="funkcAgregujace.php">Funkcje Agregujace</a>
     <a href="formularz.html">Formularz </a>
-    <a href="insert.php">Insert </a><br/>
+    <a href="insert.php">Insert </a>
+    <a href="danedobazy.html">Do Bazy </a><br/>
     </div>
 <?php
 echo("<h1>Joanna Dyl nr 4</h1>");
