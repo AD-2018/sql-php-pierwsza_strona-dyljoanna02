@@ -1,4 +1,6 @@
 <?php
+echo("jestes w insert.php");
+echo $_POST['name'];
 
 $servername = "mysql-joannadyl.alwaysdata.net";
 $username = "joannadyl";
@@ -11,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
-       VALUES (null,'Ksawery', 3, 36,'1995-10-21')";
+       VALUES (null,$_POST['name'], 3, 36,'1995-10-21')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
