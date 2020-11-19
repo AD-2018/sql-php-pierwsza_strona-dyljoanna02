@@ -9,7 +9,8 @@
         <a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
     <a href="orgPracownicy.php">Pracownicy i Organizacja </a>
     <a href="dataczas.php">Data i Czas </a>
-    <a href="funkcAgregujace.php">Funkcje Agregujace</a><br/>
+    <a href="funkcAgregujace.php">Funkcje Agregujace</a>
+    <a href="formularz.html">Formularz </a><br/>
     </div>
 <?php
 echo("Jestem tutaj: <br>Data i Czas</br>");
