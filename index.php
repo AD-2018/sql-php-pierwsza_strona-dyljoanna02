@@ -8,7 +8,8 @@
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
     <a href="orgPracownicy.php">Pracownicy i Organizacja </a>
     <a href="dataczas.php">Data i Czas </a>
-    <a href="funkcAgregujace.php">Funkcje Agregujace</a><br/>
+    <a href="funkcAgregujace.php">Funkcje Agregujace</a>
+    <a href="formularz.html">Formularz </a><br/>
     </div>
 <?php
 echo("<h1>Joanna Dyl nr 4</h1>");
