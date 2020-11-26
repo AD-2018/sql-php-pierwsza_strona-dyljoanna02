@@ -1,6 +1,6 @@
 <?php
 echo("jestes w delete.php <br>");
-echo $_POST['id'];
+echo $_POST['id_pracownicy'];
 
 
 $servername = "mysql-joannadyl.alwaysdata.net";
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 //definiujemy zapytanie $sql
-$sql = "DELETE FROM pracownicy WHERE id=".$_POST['id'];
+$sql = "DELETE FROM pracownicy WHERE id=".$_POST['id_pracownicy'];
 
 //wyświetlamy zapytanie $sql
 echo $sql;
