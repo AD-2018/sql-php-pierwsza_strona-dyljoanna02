@@ -3,20 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="style.css">
   <title>Dane do Bazy</title>
 </head>
 <body>
 	<h3> DODAWANIE PRACOWNIKA </h3>
 	<form action="insert.php" method="POST">
-	    <input type="text" name="imie">
-		<input type="number" name="dzial"></br>
-		<input type="number" name="zarobki"></br>
-		<input type="date" name="data_urodzenia"></br>
+		<p>IMIĘ: </p><input type="text" name="imie"></br>
+		<p>DZIAŁ: </p><input type="number" name="dzial"></br>
+		<p>ZAROBKI: </p><input type="number" name="zarobki"></br>
+		<p>DATA URODZENIA: </p><input type="date" name="data_urodzenia"></br>
 		<input type="submit" value="dodaj pracownika">
 	</form>
 	<h3> USUWANIE PRACOWNIKA </h3>
 	<form action="delete.php" method="POST">
-   		<input type="number" name="id_pracownicy"></br>
+		<p>ID PRACOWNIKA: </p><input type="number" name="id_pracownicy"></br>
    		<input type="submit" value="Zapisz w zmiennej $_POST['id_pracownicy']">
 	</form>
 <?php
