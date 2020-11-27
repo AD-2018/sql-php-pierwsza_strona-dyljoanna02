@@ -22,6 +22,7 @@ echo $sql;
 
 if ($conn->query($sql) === TRUE) {
   echo "<br>Record deleted successfully";
+  header('Location: http://www.example.com/');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
