@@ -9,10 +9,10 @@
 <body>
 	<h3> DODAWANIE PRACOWNIKA </h3>
 	<form action="insert.php" method="POST">
-		<p>IMIĘ: </p><input type="text" name="imie"></br>
-		<p>DZIAŁ: </p><input type="number" name="dzial"></br>
-		<p>ZAROBKI: </p><input type="number" name="zarobki"></br>
-		<p>DATA URODZENIA: </p><input type="date" name="data_urodzenia"></br>
+		<p>IMIĘ: </p><input type="text" name="imie">
+		<p>DZIAŁ: </p><input type="number" name="dzial">
+		<p>ZAROBKI: </p><input type="number" name="zarobki">
+		<p>DATA URODZENIA: </p><input type="date" name="data_urodzenia"><br>
 		<input type="submit" value="dodaj pracownika">
 	</form>
 	<h3> USUWANIE PRACOWNIKA </h3>
