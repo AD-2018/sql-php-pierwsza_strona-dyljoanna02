@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $sql);
     }
 
 echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>id</th><th>imie</th><th>zarobki</th><th>data urodzenia</th><th>dzial</th></tr>");
+echo ("<tr><th>id</th><th>imie</th><th>zarobki</th><th>data urodzenia</th><th>dzial</th><th>usuwanie</th></tr>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
    echo('<td>'.$row['id_pracownicy'].'</td>'.'<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td>'.'<td>'.$row['dzial'].'</td>'.'<td>'.$row['data_urodzenia'].'</td>'.
