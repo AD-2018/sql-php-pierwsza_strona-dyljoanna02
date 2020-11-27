@@ -13,12 +13,12 @@
 		<p>DZIAŁ: </p><input type="number" name="dzial">
 		<p>ZAROBKI: </p><input type="number" name="zarobki">
 		<p>DATA URODZENIA: </p><input type="date" name="data_urodzenia"><br>
-		<input type="submit" value="dodaj pracownika">
+		<input type="submit" value="Dodaj Pracownika">
 	</form>
 	<h3> USUWANIE PRACOWNIKA </h3>
 	<form action="delete.php" method="POST">
 		<p>ID PRACOWNIKA: </p><input type="number" name="id_pracownicy"></br>
-   		<input type="submit" value="Zapisz w zmiennej $_POST['id_pracownicy']">
+   		<input type="submit" value="Usuń Pracownika">
 	</form>
 <?php
 	require_once "connect.php";
