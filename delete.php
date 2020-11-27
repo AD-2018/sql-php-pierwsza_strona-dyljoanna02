@@ -4,10 +4,7 @@ echo("<br>");
 echo $_POST['id_pracownicy'];
 
 
-$servername = "mysql-joannadyl.alwaysdata.net";
-$username = "joannadyl";
-$password = "lollol92589@";
-$dbname = "joannadyl_sql";
+require_once "connect.php";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -22,7 +19,7 @@ echo $sql;
 
 if ($conn->query($sql) === TRUE) {
   echo "<br>Record deleted successfully";
-  header('Location: http://www.example.com/');
+  header('Location: https://dyljoanna.herokuapp.com/danedobazy.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
