@@ -42,7 +42,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
          '<td>
 	<form action="delete.php" method="POST">
-        <input type="hidden" name="id" value="'.$row['id_pracownicy'].'">
+        <input type="hidden" name="id_pracownicy" value="'.$row['id_pracownicy'].'">
         <input type="submit" value="USUŃ">
     	</form>
 	</td>');
