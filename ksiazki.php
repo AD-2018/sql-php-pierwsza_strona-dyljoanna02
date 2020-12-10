@@ -26,9 +26,7 @@ $result = mysqli_query($conn, $sql);
 echo('<label for="bibl_autor">Wybierz autora: </label>');
 echo('<select id="bibl_autor">');
 while($row = mysqli_fetch_assoc($result)) {
-    echo ('<tr>');
-    echo ("<td>".$row['id_autor']."</td><td>".$row['autor']."</td>");
-    echo ('</tr>');
+    echo ("<option>".$row['id_autor']."</option>");
 echo ('</select>');
 
 $sql = "SELECT * FROM bibl_tytul";
