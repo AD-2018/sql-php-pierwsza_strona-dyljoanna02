@@ -37,7 +37,7 @@ echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
      if ( $result) {
-        echo "<li>ok";
+        echo "<li>ok</br>";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
