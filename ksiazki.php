@@ -24,8 +24,11 @@ $result = mysqli_query($conn, $sql);
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<label for="bibl_autor">Wybierz autora: </label>');
-echo('<select id="id_autor">');
-echo('<option value="id_autor"></option>');
+echo('<select id="bibl_autor">');
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+    echo ("<td>".$row['id_autor']."</td><td>".$row['autor']."</td>");
+    echo ('</tr>');
 echo ('</select>');
 
 $sql = "SELECT * FROM bibl_tytul";
