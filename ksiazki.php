@@ -42,14 +42,14 @@ $result = mysqli_query($conn, $sql);
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>id_tytul</th><th>tytul</th></tr>");
-while($row = mysqli_fetch_assoc($result)) {
-    echo ('<tr>');
-    echo ("<td>".$row['id_tytul']."</td><td>".$row['tytul']."</td>");
-    echo ('</tr>');
-}
-echo ('</table>');
+echo('<label for="bibl_tytul">Wybierz tytuł: </label>');	
+echo('<select name="tytul">');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<option value="'.$row['id_tytul'].'">');
+        echo($row['tytul']);
+        echo("</option>"); 
+    }
+echo('</select>');
 	
 $sql = "SELECT * FROM bibl_book";
 echo("<h3>Powiązania</h3>");
