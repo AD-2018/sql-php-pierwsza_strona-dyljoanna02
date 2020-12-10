@@ -24,11 +24,11 @@ $result = mysqli_query($conn, $sql);
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-echo('<table border="1" class="tabelka_moja">');
-echo ("<tr><th>id_autor</th><th>autor</th></tr>");
+echo('<select id="autor">');
+echo ("<option value="id">Henryk Sienkiewicz</option>");
 while($row = mysqli_fetch_assoc($result)) {
     echo ('<tr>');
-    echo ("<td>".$row['id_autor']."</td><td>".$row['autor']."</td>");
+    echo ("<option value="id">Henryk Sienkiewicz</option>");
     echo ('</tr>');
 }
 echo ('</table>');
