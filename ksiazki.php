@@ -23,12 +23,10 @@ $result = mysqli_query($conn, $sql);
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-
-echo('<select id="autor">');
-echo ("<option value="id">Henryk Sienkiewicz</option>");
-while($row = mysqli_fetch_assoc($result)) {
-    echo ("<option value="id">Henryk Sienkiewicz</option>");
-}
+echo('<label for="bibl_autor">Wybierz autora: </label>');
+echo('<select id="bibl_autor">');
+echo('<option value="id_autor"></option>');
+echo('<option value="autor"></option>');
 echo ('</select>');
 
 $sql = "SELECT * FROM bibl_tytul";
