@@ -27,11 +27,9 @@ $result = mysqli_query($conn, $sql);
 echo('<select id="autor">');
 echo ("<option value="id">Henryk Sienkiewicz</option>");
 while($row = mysqli_fetch_assoc($result)) {
-    echo ('<tr>');
     echo ("<option value="id">Henryk Sienkiewicz</option>");
-    echo ('</tr>');
 }
-echo ('</table>');
+echo ('</select>');
 
 $sql = "SELECT * FROM bibl_tytul";
 echo("<h3>Książki</h3>");
