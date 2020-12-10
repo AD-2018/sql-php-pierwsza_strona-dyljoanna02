@@ -14,7 +14,7 @@
 require_once "connect.php";
 
 $sql = "SELECT * FROM bibl_autor";
-echo ("<br>Autorzy<br>");
+echo ("<h3>Autorzy</h3>");
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
