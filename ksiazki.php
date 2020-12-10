@@ -14,20 +14,22 @@
 require_once "connect.php";
 
 $sql = "SELECT * FROM bibl_autor";
-echo("<h3>Autorzy</h3>");
-echo("<li>".$sql."<br><br>");
-
-$result = mysqli_query($conn, $sql);
-     if ( $result) {
+echo ("<br>Autorzy<br>");
+echo ("<li>".$sql);
+  $result = mysqli_query($conn, $sql);
+    if ( $result) {
         echo "<li>ok</br>";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-echo('<label for="bibl_autor">Wybierz autora: </label>');
-echo('<select id="id_autor">');
-while($row = mysqli_fetch_assoc($result)) {
-    echo ("<option value='.$row['id_autor'].'>".$row['autor']."</option>");
-echo ('</select>');
+echo('<label for="bibl_autor">Wybierz autora: </label>');	
+echo('<select name="autor">');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<option value="'.$row['id_autor'].'">');
+        echo(.$row['autor'].);
+        echo("</option>"); 
+    }
+echo('</select>');
 
 $sql = "SELECT * FROM bibl_tytul";
 echo("<h3>Książki</h3>");
