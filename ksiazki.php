@@ -19,14 +19,13 @@ echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
      if ( $result) {
-        echo "<li>ok";
+        echo "<li>ok</br>";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<label for="bibl_autor">Wybierz autora: </label>');
-echo('<select id="bibl_autor">');
+echo('<select id="id_autor">');
 echo('<option value="id_autor"></option>');
-echo('<option value="autor"></option>');
 echo ('</select>');
 
 $sql = "SELECT * FROM bibl_tytul";
