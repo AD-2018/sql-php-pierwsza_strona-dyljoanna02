@@ -26,7 +26,7 @@ echo('<label for="bibl_autor">Wybierz autora: </label>');
 echo('<select name="autor">');
     while($row=mysqli_fetch_assoc($result)){
         echo('<option value="'.$row['id_autor'].'">');
-        echo(.$row['autor'].);
+        echo($row['autor']);
         echo("</option>"); 
     }
 echo('</select>');
