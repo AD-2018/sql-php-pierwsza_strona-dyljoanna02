@@ -4,17 +4,23 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
-    <a href="orgPracownicy.php">Pracownicy i Organizacja </a>
-    <a href="dataczas.php">Data i Czas </a>
-    <a href="funkcAgregujace.php">Funkcje Agregujace</a>
-    <a href="formularz.html">Formularz </a>
-    <a href="danedobazy.php">Do Bazy </a>
-    <a href="ksiazki.php">Ksiazki </a><br/>
-    </div>
+    <div class="container">
+        <div class="tytul red">
+        <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a>
+            <div class="imie">
+            <h1>Joanna Dyl nr 4</h1>
+            </div>
+        </div>
+        <div class="menu blue">
+        <a href="orgPracownicy.php">Pracownicy i Organizacja </a>
+        <a href="dataczas.php">Data i Czas </a>
+        <a href="funkcAgregujace.php">Funkcje Agregujace</a>
+        <a href="formularz.html">Formularz </a>
+        <a href="danedobazy.php">Do Bazy </a>
+        <a href="ksiazki.php">Ksiazki </a><br/>
+        </div>
+    <div class="tresc green">
 <?php
-echo("<h1>Joanna Dyl nr 4</h1>");
     
     require_once "connect.php";
     
@@ -98,6 +104,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
 ?>
-
+        </div>
+    </div>
 </body>
 </html>
