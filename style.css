@@ -32,7 +32,6 @@ a:hover, a:active {
 
 }
 .container {
-    background-color: grey;
     display: flex;
     flex-wrap: wrap;
 }
