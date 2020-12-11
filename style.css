@@ -56,5 +56,6 @@ a:hover, a:active {
 }
 .green {
     background-color: lightgreen;
-    width: 80%
+    width: 80%;
+    margin: 10px;
 }
