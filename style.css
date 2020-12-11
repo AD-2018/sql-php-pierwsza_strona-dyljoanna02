@@ -24,8 +24,38 @@ a:link, a:visited {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+
 }
 
 a:hover, a:active {
   background-color: red;
+
+}
+.container {
+    background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+}
+.imie {
+    margin: 10px; 
+    
+}
+.red {
+    background-color: lightcoral;
+    width: 100%;
+    margin: 10px;
+}
+.menu {
+    margin: 10px;
+}
+.blue {
+    background-color: #99ccff;
+    width: 20%
+}
+.tresc {
+    margin: 10px;
+}
+.green {
+    background-color: lightgreen;
+    width: 70%
 }
