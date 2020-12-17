@@ -7,9 +7,10 @@
   <title>Książki</title>
 </head>
 <body>
-<div>
+<div class="menu blue">
 <a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
 </div>
+	<div class="tresc green">
 <?php
 require_once "connect.php";
 
@@ -91,5 +92,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
 ?>
+	</div>
 </body>
 </html>
