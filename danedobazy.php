@@ -7,6 +7,7 @@
   <title>Dane do Bazy</title>
 </head>
 <body>
+	<div class="container">
 	<div class="menu blue">
 <a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
 </div>
@@ -54,6 +55,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
 ?>
+	</div>
 	</div>
 </body>
 </html>
