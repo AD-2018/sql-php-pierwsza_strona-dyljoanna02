@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="menu blue">
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
         <a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
     <a href="orgPracownicy.php">Pracownicy i Organizacja </a>
@@ -12,6 +12,7 @@
     <a href="funkcAgregujace.php">Funkcje Agregujace</a>
     <a href="formularz.html">Formularz </a><br/>
     </div>
+    <div class="tresc green">
 <?php
 echo("Jestem tutaj: <br>Data i Czas</br>");
     
@@ -501,6 +502,6 @@ echo('<table border="1">');
 
 echo('</table>');
 ?>
-
+    </div>
 </body>
 </html>
