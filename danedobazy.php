@@ -7,6 +7,10 @@
   <title>Dane do Bazy</title>
 </head>
 <body>
+	<div class="menu blue">
+<a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
+</div>
+	<div class="tresc green">
 	<h3> DODAWANIE PRACOWNIKA </h3>
 	<form action="insert.php" method="POST">
 		<p>IMIĘ: </p><input type="text" name="imie">
@@ -50,5 +54,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
 ?>
+	</div>
 </body>
 </html>
