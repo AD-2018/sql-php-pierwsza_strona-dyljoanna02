@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div>
+     <div class="menu blue">
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
           <a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
     <a href="orgPracownicy.php">Pracownicy i Organizacja </a>
@@ -12,7 +12,7 @@
     <a href="funkcAgregujace.php">Funkcje Agregujace</a>
     <a href="formularz.html">Formularz </a><br/>
     </div>
-
+<div class="tresc green">
 <?php
 echo("Jestem tu: <br/>Pracownicy i Organizacja<br/>");
      require_once "connect.php";
@@ -260,5 +260,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo ('</table>');
 ?>
+     </div>
   </body>
 </html>
