@@ -8,7 +8,7 @@
         <div class="tytul red">
         <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a>
             <div class="imie">
-            <h1>Joanna Dyl nr 4 kl.III ti</h1>
+            <h1>Joanna Dyl nr 4</h1>
             </div>
         </div>
         <div class="menu blue">
