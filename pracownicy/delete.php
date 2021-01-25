@@ -4,7 +4,7 @@ echo("<br>");
 echo $_POST['id_pracownicy'];
 
 
-require_once "connect.php";
+require_once "../connect.php";
 
 
 //definiujemy zapytanie $sql

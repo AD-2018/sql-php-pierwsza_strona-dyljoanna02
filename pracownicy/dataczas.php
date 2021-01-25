@@ -16,7 +16,7 @@
 <?php
 echo("Jestem tutaj: <br>Data i Czas</br>");
     
-    require_once "connect.php";
+    require_once "../connect.php";
     
     
 $sql = "SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy";

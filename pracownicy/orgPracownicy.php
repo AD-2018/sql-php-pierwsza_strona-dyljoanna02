@@ -15,7 +15,7 @@
 <div class="tresc green">
 <?php
 echo("Jestem tu: <br/>Pracownicy i Organizacja<br/>");
-     require_once "connect.php";
+     require_once "../connect.php";
 
 $sql = "SELECT imie,nazwa_dzial FROM pracownicy,organizacja WHERE id_org=dzial";
 echo("<h3>ZADANIE 1</h3>");
