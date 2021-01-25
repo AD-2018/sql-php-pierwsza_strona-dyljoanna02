@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css">
   <title>Książki</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 </div>
 	<div class="tresc green">
 <?php
-require_once "connect.php";
+require_once ("../connect.php");
 
 $sql = "SELECT * FROM bibl_autor";
 echo ("<h3>Autorzy</h3>");
