@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/style.css">
-  <title>Książki</title>
+  <title>Joanna Dyl</title>
 </head>
 <body>
 	<div class="container">

@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+<title>Joanna Dyl</title>
 </head>
 <body>
     <div class="container">
