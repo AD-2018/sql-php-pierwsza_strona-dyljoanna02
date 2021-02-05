@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/style.css">
   <title>Joanna Dyl</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  <link rel="manifest" href="/icon/site.webmanifest">
 </head>
 <body>
 	<div class="container">
@@ -12,6 +16,17 @@
 <a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
 </div>
 	<div class="tresc green">
+  <h3>Dodawanie Autora</h3>
+	<form action="/biblioteka/insertautor.php" method="POST">
+		<label>Autor</label><input type="text" name="autor"></br>
+		<input type="submit" value="Dodaj Autora">
+	</form>
+  <h3>Dodawanie Tytułu</h3>
+	<form action="/biblioteka/inserttytul.php" method="POST">
+		<label>Tytul</label><input type="text" name="tytul"></br>
+		<input type="submit" value="Dodaj Tytul">
+	</form>
+
 <?php
 require_once ("../connect.php");
 
