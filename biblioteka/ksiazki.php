@@ -21,11 +21,21 @@
 		<label>Autor</label><input type="text" name="autor"></br>
 		<input type="submit" value="Dodaj Autora">
 	</form>
+  <h3>Usuwanie Autora</h3>
+	<form action="/biblioteka/deleteautor.php" method="POST">
+  		<input type="number" name="id"></br>
+   		<input type="submit" value="Usuń Autora">
+	</form>
   <h3>Dodawanie Tytułu</h3>
 	<form action="/biblioteka/inserttytul.php" method="POST">
 		<label>Tytul</label><input type="text" name="tytul"></br>
 		<input type="submit" value="Dodaj Tytul">
 	</form>
+  <h3>Usuwanie Tytułu</h3>
+<form action="/biblioteka/deletetytul.php" method="POST">
+    <input type="number" name="id"></br>
+     <input type="submit" value="Usuń Tytul">
+</form>
 
 <?php
 require_once ("../connect.php");
