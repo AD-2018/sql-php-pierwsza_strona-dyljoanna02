@@ -20,9 +20,10 @@
         <a href="/pracownicy/orgPracownicy.php">Pracownicy i Organizacja </a>
         <a href="/pracownicy/dataczas.php">Data i Czas </a>
         <a href="/pracownicy/funkcAgregujace.php">Funkcje Agregujace</a>
-        <a href="/pracownicy/formularz.html">Formularz </a>
-        <a href="/pracownicy/danedobazy.php">Do Bazy </a>
-        <a href="/biblioteka/ksiazki.php">Ksiazki </a><br/>
+        <a href="/pracownicy/formularz.html">Formularz</a>
+        <a href="/pracownicy/danedobazy.php">Do Bazy</a>
+        <a href="/biblioteka/ksiazki.php">Ksiazki</a><br/>
+        <a href="/flexbox/index.html">Flexbox</a>
         </div>
     <div class="tresc green">
 <?php
