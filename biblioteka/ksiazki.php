@@ -21,21 +21,11 @@
 		<label>Autor</label><input type="text" name="autor"></br>
 		<input type="submit" value="Dodaj Autora">
 	</form>
-  <h3>Usuwanie Autora</h3>
-	<form action="/biblioteka/deleteautor.php" method="POST">
-  		<input type="number" name="id"></br>
-   		<input type="submit" value="Usuń Autora">
-	</form>
   <h3>Dodawanie Tytułu</h3>
 	<form action="/biblioteka/inserttytul.php" method="POST">
 		<label>Tytul</label><input type="text" name="tytul"></br>
 		<input type="submit" value="Dodaj Tytul">
 	</form>
-  <h3>Usuwanie Tytułu</h3>
-<form action="/biblioteka/deletetytul.php" method="POST">
-    <input type="number" name="id"></br>
-     <input type="submit" value="Usuń Tytul">
-</form>
 
 <?php
 require_once ("../connect.php");
@@ -104,6 +94,33 @@ echo('<select name="tytul">');
         echo("</option>"); 
     }
 echo('</select>');
+
+$sql = "SELECT * FROM bibl_tytul";
+echo("<h3>Autorzy</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>id_tytul</th><th>tytul</th><th>usuwanie</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+   echo('<td>'.$row['id_tytul'].'</td>'.'<td>'.$row['tytul'].'</td>'.
+
+         '<td>
+	<form action="deleteautor.php" method="POST">
+        <input type="hidden" name="id_tytul" value="'.$row['id_tytul'].'">
+        <input type="submit" value="USUŃ">
+    	</form>
+	</td>');
+    echo ('</tr>');
+}
+echo ('</table>');
 	
 $sql = "SELECT * FROM bibl_book";
 echo("<h3>Powiązania</h3>");
