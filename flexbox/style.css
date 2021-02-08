@@ -29,3 +29,15 @@
     margin: 0 1rem 1rem 0;
     width: 100%;
   }
+  a:link, a:visited {
+    background-color: #99ccff;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:hover, a:active {
+    background-color: red;
+  
+  }
