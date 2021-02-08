@@ -113,7 +113,7 @@ while($row = mysqli_fetch_assoc($result)) {
    echo('<td>'.$row['id_tytul'].'</td>'.'<td>'.$row['tytul'].'</td>'.
 
          '<td>
-	<form action="deleteautor.php" method="POST">
+	<form action="deletetytul.php" method="POST">
         <input type="hidden" name="id_tytul" value="'.$row['id_tytul'].'">
         <input type="submit" value="USUŃ">
     	</form>
