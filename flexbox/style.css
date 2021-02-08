@@ -29,7 +29,7 @@
     margin: 0 1rem 1rem 0;
     width: 100%;
   }
-  a:link, a:visited {
+  przycisk:link, przycisk:visited {
     background-color: #99ccff;
     color: black;
     padding: 14px 25px;
@@ -37,7 +37,7 @@
     text-decoration: none;
     display: inline-block;
   }
-  a:hover, a:active {
+  przycisk:hover, przycisk:active {
     background-color: red;
   
   }
