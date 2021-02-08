@@ -4,7 +4,7 @@ echo $_POST['id'];
 
 require_once("../connect.php");
 
-$sql = "DELETE FROM bibl_autor WHERE id_autor=".$_POST['id'];
+$sql = "DELETE FROM bibl_autor WHERE id_autor=".$_POST['id_autor'];
 
 echo $sql;
 

@@ -58,6 +58,33 @@ echo('<select name="autor">');
     }
 echo('</select>');
 
+$sql = "SELECT * FROM bibl_autor";
+echo("<h3>Autorzy</h3>");
+echo("<li>".$sql."<br><br>");
+
+$result = mysqli_query($conn, $sql);
+     if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1" class="tabelka_moja">');
+echo ("<tr><th>id_autor</th><th>autor</th><th>usuwanie</th></tr>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo ('<tr>');
+   echo('<td>'.$row['id_autor'].'</td>'.'<td>'.$row['autor'].'</td>'.
+
+         '<td>
+	<form action="deleteautor.php" method="POST">
+        <input type="hidden" name="id_autor" value="'.$row['id_autor'].'">
+        <input type="submit" value="USUŃ">
+    	</form>
+	</td>');
+    echo ('</tr>');
+}
+echo ('</table>');
+
 $sql = "SELECT * FROM bibl_tytul";
 echo("<h3>Książki</h3>");
 echo("<li>".$sql."<br><br>");
