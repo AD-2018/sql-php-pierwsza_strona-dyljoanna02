@@ -96,7 +96,7 @@ echo('<select name="tytul">');
 echo('</select>');
 
 $sql = "SELECT * FROM bibl_tytul";
-echo("<h3>Autorzy</h3>");
+echo("<h3>Książki</h3>");
 echo("<li>".$sql."<br><br>");
 
 $result = mysqli_query($conn, $sql);
