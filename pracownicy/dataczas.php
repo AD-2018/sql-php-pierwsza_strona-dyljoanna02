@@ -11,7 +11,7 @@
 <body>
     <div class="container">
     <div class="menu blue">
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
+    <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
     <a class="link" href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
     <a class="link" href="/pracownicy/orgPracownicy.php">Pracownicy i Organizacja </a>
     <a class="link" href="/pracownicy/funkcAgregujace.php">Funkcje Agregujace</a>
