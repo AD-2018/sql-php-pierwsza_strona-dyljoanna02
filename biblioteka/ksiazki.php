@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 <div class="menu blue">
-<a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
+<a class="link" href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
 </div>
 	<div class="tresc green">
   <h3>Dodawanie Autora</h3>

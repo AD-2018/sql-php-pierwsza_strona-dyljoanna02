@@ -12,10 +12,10 @@
      <div class="container">
      <div class="menu blue">
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
-          <a href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
-    <a href="/pracownicy/dataczas.php">Data i Czas </a>
-    <a href="/pracownicy/funkcAgregujace.php">Funkcje Agregujace</a>
-    <a href="/pracownicy/formularz.html">Formularz </a><br/>
+    <a class="link" href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
+    <a class="link" href="/pracownicy/dataczas.php">Data i Czas </a>
+    <a class="link" href="/pracownicy/funkcAgregujace.php">Funkcje Agregujace</a>
+    <a class="link" href="/pracownicy/formularz.html">Formularz </a><br/>
     </div>
 <div class="tresc green">
 <?php
