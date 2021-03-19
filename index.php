@@ -24,6 +24,7 @@
         <a class="link" href="/pracownicy/danedobazy.php">Do Bazy</a>
         <a class="link" href="/biblioteka/ksiazki.php">Ksiazki</a><br/>
         <a class="link" href="/flexbox/index.html">Flexbox</a>
+        <a class="link" href="/grid/index.html">GRID</a>
         </div>
     <div class="tresc green">
 <?php
