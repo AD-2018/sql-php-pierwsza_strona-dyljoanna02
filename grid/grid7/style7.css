@@ -6,11 +6,11 @@
     background-color: rgb(50, 117, 205);
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "a b g"
-    "a c e"
-    "a d f";
+    "h a b g"
+    "h a c e"
+    "h a d f";
   }
   header {
       background-color: red;
@@ -45,4 +45,34 @@
     background-color: lightgreen;
     grid-area: g;
     height: auto;
+  }
+  .menu {
+    grid-area: h;
+    background-color: #99ccff;
+    height: 100vh;
+  }
+.link {
+    padding: 1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 70%;
+  }
+a:link, a:visited {
+    background-color: #99ccff;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  
+  }
+  
+a:hover, a:active {
+    background-color: red;
+  
   }
