@@ -20,7 +20,6 @@ height: 100vh;
     background-color: lightgreen;
     grid-area: b;
     height: 20vh;
-    width: 100%;
 }
 .glow {
 background-color: skyblue;
@@ -45,6 +44,7 @@ height: 40vh;
 .menu {
     grid-area: g;
     background-color: #99ccff;
+    height: 100vh;
   }
 .link {
     padding: 1rem;
