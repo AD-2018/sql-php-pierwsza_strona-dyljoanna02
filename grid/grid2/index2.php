@@ -46,6 +46,7 @@
       }
       echo ('</table>');
       ?>
+      </div>
       <div class="nawi">
        2
       </div>
