@@ -24,7 +24,7 @@
         <a class="link" href="../grid11/index11.php">GRID11</a>
         <a class="link" href="../grid12/index12.php">GRID12</a>
     </div>
-      <dic class="ban">
+      <div class="ban">
       <?php
         require_once("../../connect.php");
       $sql = "SELECT * FROM osoba";

@@ -25,17 +25,17 @@
   .glow {
       background-color: lightskyblue;
       grid-area: c;
-      height: 45vh;
+      height: 60vh;
   }
   .pob {
       background-color: pink;
       grid-area: e;
-      height: 45vh;
+      height: 60vh;
   }
   .stop {
       background-color: yellow;
       grid-area: d;
-      height: 40vh;
+      height: 25vh;
   }
   .menu {
     grid-area: g;

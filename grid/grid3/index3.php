@@ -76,9 +76,6 @@
       ?>
       </div>
       <div class="pob">
-        5
-      </div>
-      <div class="stop">
       <?php
         require_once("../../connect.php");
       $sql = "SELECT producent, produkt FROM producent, produkt, producent_produkt WHERE producent.id_prod = producent_produkt.id_producent AND produkt.id_produkt = producent_produkt.id_produkt";
@@ -101,6 +98,9 @@
       }
       echo ('</table>');
       ?>
+      </div>
+      <div class="stop">
+      4
       </div>
     </div>
   </body>
