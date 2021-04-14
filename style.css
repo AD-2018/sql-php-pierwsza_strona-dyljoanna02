@@ -70,3 +70,6 @@ a:hover, a:active {
   display: inline-block;
   width: 70%;
 }
+li {
+  list-style-type: none;
+}

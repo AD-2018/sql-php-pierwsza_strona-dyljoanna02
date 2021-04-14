@@ -10,6 +10,7 @@
   <body>
     <div class="container">
     <div class="menu blue">
+    <a class="link" href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
     <a class="link" href="../grid1/index1.php">GRID1</a>
         <a class="link" href="../grid2/index2.php">GRID2</a>
         <a class="link" href="../grid3/index3.php">GRID3</a>

@@ -6,33 +6,82 @@
     background-color: rgb(50, 117, 205);
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "a b b"
-    "a c e"
-    "a d d";
+    "g a b b"
+    "g a c e"
+    "g a d d";
   }
-  header {
+  .ban {
       background-color: red;
       grid-area: a;
       height: 100vh;
   }
-  nav {
+  .nawi {
       background-color: lightgreen;
       grid-area: b;
       height: 35vh;
   }
-  main {
+  .glow {
       background-color: lightskyblue;
       grid-area: c;
       height: 35vh;
   }
-  aside {
+  .pob {
       background-color: pink;
       grid-area: e;
   }
-  footer {
+  .stop {
       background-color: yellow;
       grid-area: d;
       height: 30vh;
+  }
+  .menu {
+    grid-area: g;
+    background-color: #99ccff;
+    height: 100vh;
+  }
+.link {
+    padding: 1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 70%;
+  }
+a:link, a:visited {
+    background-color: #99ccff;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  
+  }
+  
+a:hover, a:active {
+    background-color: red;
+  
+  }
+li {
+    list-style-type: none;
+}
+table, th, td {
+    border: 1px solid black;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #9999ff; 
+  }
+  tr {
+    background-color: #e6ffff;
   }

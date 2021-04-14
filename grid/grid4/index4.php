@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSS Grid</title>
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style4.css" />
   </head>
   <body>
     <div class="container">
@@ -24,11 +24,11 @@
         <a class="link" href="../grid11/index11.php">GRID11</a>
         <a class="link" href="../grid12/index12.php">GRID12</a>
     </div>
-    <div class="ban">
-        <?php
+      <dic class="ban">
+      <?php
         require_once("../../connect.php");
-      $sql = "SELECT * FROM prawnik";
-      echo("<h3>PRAWNICY</h3>");
+      $sql = "SELECT * FROM osoba";
+      echo("<h3>OSOBY</h3>");
       echo("<li>".$sql."<br><br>");
       
       $result = mysqli_query($conn, $sql);
@@ -39,23 +39,23 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>PRAWNIK</th>");
+      echo ("<tr><th>ID</th><th>OSOBA</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_praw']."</td><td>".$row['prawnik']."</td>");
+          echo ("<td>".$row['id_os']."</td><td>".$row['osoba']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
       ?>
       </div>
       <div class="nawi">
-       2
+        2
       </div>
       <div class="glow">
       <?php
         require_once("../../connect.php");
-      $sql = "SELECT * FROM sprawa";
-      echo("<h3>SPRAWY</h3>");
+      $sql = "SELECT * FROM rola";
+      echo("<h3>ROLE</h3>");
       echo("<li>".$sql."<br><br>");
       
       $result = mysqli_query($conn, $sql);
@@ -66,10 +66,10 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>SPRAWA</th>");
+      echo ("<tr><th>ID</th><th>ROLA</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_spraw']."</td><td>".$row['sprawa']."</td>");
+          echo ("<td>".$row['id_rol']."</td><td>".$row['rola']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
@@ -79,10 +79,10 @@
         5
       </div>
       <div class="stop">
-        <?php
+      <?php
         require_once("../../connect.php");
-      $sql = "SELECT prawnik, sprawa FROM prawnik, sprawa, prawnik_sprawa WHERE prawnik.id_praw = prawnik_sprawa.id_prawnik AND sprawa.id_spraw = prawnik_sprawa.id_sprawa";
-      echo("<h3>PRAWNICY I SPRAWY</h3>");
+      $sql = "SELECT osoba, rola FROM osoba, rola, osoba_rola WHERE osoba.id_os = osoba_rola.id_osoba AND rola.id_rol = osoba_rola.id_rola";
+      echo("<h3>OSOBY I ROLE</h3>");
       echo("<li>".$sql."<br><br>");
       
       $result = mysqli_query($conn, $sql);
@@ -93,18 +93,15 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>PRAWNIK</th><th>SPRAWA</th>");
+      echo ("<tr><th>OSOBA</th><th>ROLA</th>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['prawnik']."</td><td>".$row['sprawa']."</td>");
+          echo ("<td>".$row['osoba']."</td><td>".$row['rola']."</td>");
           echo ('</tr>');
       }
       echo ('</table>');
       ?>
       </div>
-      <div class="dod">
-        7
-    </div>
     </div>
   </body>
 </html>
