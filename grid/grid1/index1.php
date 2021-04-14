@@ -25,7 +25,7 @@
     <div class="container">
       <?php
       require_once("../../connect.php")
-      echo("<header>");
+      echo("<div class='header'>");
       $sql = "SELECT * FROM pracownik";
       echo("<h3>PRACOWNICY</h3>");
       echo("<li>".$sql."<br><br>");
@@ -45,8 +45,9 @@
           echo ('</tr>');
       }
       echo ('</table>');
-      echo("</header>");
-      echo("<nav>");
+      echo("</div>");
+
+      echo("<div class='nav'>");
       $sql = "SELECT * FROM projekt";
       echo("<h3>PROJEKTY</h3>");
       echo("<li>".$sql."<br><br>");
@@ -66,14 +67,14 @@
           echo ('</tr>');
       }
       echo ('</table>');
-      echo("</nav>");
-      echo("<main>");
+      echo("</div>");
+      echo("<div class='main'>");
         3
-      echo("</main>");
-      echo("<aside>");
+      echo("</div>");
+      echo("<div class='aside'>");
         5
-      echo("</aside>");
-      echo("<footer>")
+      echo("</div>");
+      echo("<div class='footer'>")
       $sql = "SELECT id, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id = pracownik_projekt.id_pracownik AND projekt.id = pracownik_projekt.id_projekt";
       echo("<h3>PRACOWNICY</h3>");
       echo("<li>".$sql."<br><br>");
@@ -93,7 +94,7 @@
           echo ('</tr>');
       }
       echo ('</table>');
-      echo("</footer>");
+      echo("</div>");
       ?>
     </div>
   </body>

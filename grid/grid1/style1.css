@@ -12,26 +12,26 @@
     "f a c e"
     "f a d e";
   }
-  header {
+  .header {
       background-color: red;
       grid-area: a;
       height: 100vh;
   }
-  nav {
+  .nav {
       background-color: lightgreen;
       grid-area: b;
       height: 35vh;
   }
-  main {
+  .main {
       background-color: lightskyblue;
       grid-area: c;
       height: 35vh;
   }
-  aside {
+  .aside {
       background-color: pink;
       grid-area: e;
   }
-  footer {
+  .footer {
       background-color: yellow;
       grid-area: d;
       height: 30vh;
