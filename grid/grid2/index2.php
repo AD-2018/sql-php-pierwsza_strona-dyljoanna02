@@ -47,7 +47,10 @@
       echo ('</table>');
       ?>
       <div class="nawi">
-        <?php
+       2
+      </div>
+      <div class="glow">
+      <?php
         require_once("../../connect.php");
       $sql = "SELECT * FROM sprawa";
       echo("<h3>SPRAWY</h3>");
@@ -69,9 +72,6 @@
       }
       echo ('</table>');
       ?>
-      </div>
-      <div class="glow">
-        3
       </div>
       <div class="pob">
         5
