@@ -24,7 +24,7 @@
     </div>
     <div class="container">
       <?php
-      require_once("../../connect.php")
+      require_once("../../connect.php");
       echo("<div class='header'>");
       $sql = "SELECT * FROM pracownik";
       echo("<h3>PRACOWNICY</h3>");
@@ -75,25 +75,7 @@
         5
       echo("</div>");
       echo("<div class='footer'>")
-      $sql = "SELECT id, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id = pracownik_projekt.id_pracownik AND projekt.id = pracownik_projekt.id_projekt";
-      echo("<h3>PRACOWNICY</h3>");
-      echo("<li>".$sql."<br><br>");
-      
-      $result = mysqli_query($conn, $sql);
-           if ( $result) {
-              echo "<li>ok";
-          } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-          }
-      
-      echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>id</th><th>pracownik</th><th>projekt</th>");
-      while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['id']."</td><td>".$row['pracownik']."</td><td>".$row['projekt']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+      4
       echo("</div>");
       ?>
     </div>
