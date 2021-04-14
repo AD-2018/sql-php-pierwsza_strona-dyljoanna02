@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style1.css" />
   </head>
   <body>
+    <div class="container">
     <div class="menu blue">
     <a class="link" href="../grid1/index1.php">GRID1</a>
         <a class="link" href="../grid2/index2.php">GRID2</a>
@@ -22,7 +23,6 @@
         <a class="link" href="../grid11/index11.php">GRID11</a>
         <a class="link" href="../grid12/index12.php">GRID12</a>
     </div>
-    <div class="container">
       <div class="ban">
         <?php
         require_once("../../connect.php");
