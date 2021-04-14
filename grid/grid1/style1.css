@@ -12,26 +12,26 @@
     "f a c e"
     "f a d e";
   }
-  .header {
+  .ban {
       background-color: red;
       grid-area: a;
       height: 100vh;
   }
-  .nav {
+  .nawi {
       background-color: lightgreen;
       grid-area: b;
       height: 35vh;
   }
-  .main {
+  .glow {
       background-color: lightskyblue;
       grid-area: c;
       height: 35vh;
   }
-  .aside {
+  .pob {
       background-color: pink;
       grid-area: e;
   }
-  .footer {
+  .stop {
       background-color: yellow;
       grid-area: d;
       height: 30vh;

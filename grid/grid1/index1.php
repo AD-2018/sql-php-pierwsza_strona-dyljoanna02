@@ -23,7 +23,7 @@
         <a class="link" href="../grid12/index12.php">GRID12</a>
     </div>
     <div class="container">
-      <div class="header">
+      <div class="ban">
         <?php
         require_once("../../connect.php");
       $sql = "SELECT * FROM pracownik";
@@ -48,7 +48,7 @@
       ?>
       </div>
 
-      <div class="nav">
+      <div class="nawi">
         <?php
         require_once("../../connect.php");
       $sql = "SELECT * FROM projekt";
@@ -72,13 +72,13 @@
       echo ('</table>');
       ?>
       </div>
-      <div class="main">
+      <div class="glow">
         3
       </div>
-      <div class="aside">
+      <div class="pob">
         5
       </div>
-      <div class="footer">
+      <div class="stop">
         <?php
         require_once("../../connect.php");
       $sql = "SELECT pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id = pracownik_projekt.id_pracownik AND projekt.id = pracownik_projekt.id_projekt";
