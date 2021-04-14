@@ -5,34 +5,34 @@
     background-color: white;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "a b b b"
-    "a c c d"
-    "a e f d";
+    "g a b b b"
+    "g a c c d"
+    "g a e f d";
 }
-header {
+.ban {
 background-color:red;
 grid-area: a;
 height: 100vh;
 }
-nav {
+.nawi {
     background-color: lightgreen;
     grid-area: b;
     height: 20vh;
     width: 100%;
 }
-main {
+.glow {
 background-color: skyblue;
 grid-area: c;
 height: 40vh;
 }
-aside {
+.pob {
     grid-area: d;
     background-color: pink;
     height: 80vh;
 }
-footer {
+.stop {
 background-color: yellow;
 grid-area: e;
 height: 40vh;
@@ -41,4 +41,36 @@ height: 40vh;
 background-color: yellow;
 grid-area: f;
 height: 40vh;
+}
+.menu {
+    grid-area: g;
+    background-color: #99ccff;
+  }
+.link {
+    padding: 1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 70%;
+  }
+a:link, a:visited {
+    background-color: #99ccff;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  
+  }
+  
+a:hover, a:active {
+    background-color: red;
+  
+  }
+li {
+    list-style-type: none;
 }
