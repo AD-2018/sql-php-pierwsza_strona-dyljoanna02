@@ -26,7 +26,7 @@
     <div class="ban">
         <?php
         require_once("../../connect.php");
-      $sql = "SELECT * FROM prawnicy";
+      $sql = "SELECT * FROM prawnik";
       echo("<h3>PRAWNICY</h3>");
       echo("<li>".$sql."<br><br>");
       
@@ -49,7 +49,7 @@
       <div class="nawi">
         <?php
         require_once("../../connect.php");
-      $sql = "SELECT * FROM sprawy";
+      $sql = "SELECT * FROM sprawa";
       echo("<h3>SPRAWY</h3>");
       echo("<li>".$sql."<br><br>");
       
@@ -79,7 +79,7 @@
       <div class="stop">
         <?php
         require_once("../../connect.php");
-      $sql = "SELECT prawnik, sprawa FROM prawnik, sprawa, prawnik_sprawa WHERE prawnik.id_praw = prawnik_sprawa.id_prawnik AND sprawa.id_sprawa = prawnik_sprawa.id_sprawa";
+      $sql = "SELECT prawnik, sprawa FROM prawnik, sprawa, prawnik_sprawa WHERE prawnik.id_praw = prawnik_sprawa.id_prawnik AND sprawa.id_spraw = prawnik_sprawa.id_sprawa";
       echo("<h3>PRAWNICY I SPRAWY</h3>");
       echo("<li>".$sql."<br><br>");
       

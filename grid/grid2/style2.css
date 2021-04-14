@@ -5,7 +5,7 @@
     background-color: white;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "g a b b b"
     "g a c c d"
