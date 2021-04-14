@@ -15,32 +15,32 @@
   .ban {
       background-color: red;
       grid-area: a;
-      height: 100vh;
+      height: 100%;
   }
   .nawi {
       background-color: lightgreen;
       grid-area: b;
-      height: auto;
+      height: 15%;
   }
   .glow {
       background-color: lightskyblue;
       grid-area: c;
-      height: auto;
+      height: 45%;
   }
   .pob {
       background-color: pink;
       grid-area: e;
-      height: auto;
+      height: 45%;
   }
   .stop {
       background-color: yellow;
       grid-area: d;
-      height: auto;
+      height: 40%;
   }
   .menu {
     grid-area: g;
     background-color: #99ccff;
-    height: auto;
+    height: 100%;
   }
 .link {
     padding: 1rem;
