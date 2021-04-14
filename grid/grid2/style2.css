@@ -3,7 +3,7 @@
 }
 .container {
     background-color: white;
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -14,37 +14,37 @@
 .ban {
 background-color:red;
 grid-area: a;
-height: 100vh;
+height: auto;
 }
 .nawi {
     background-color: lightgreen;
     grid-area: b;
-    height: 20vh;
+    height: auto;
 }
 .glow {
 background-color: skyblue;
 grid-area: c;
-height: 40vh;
+height: auto;
 }
 .pob {
     grid-area: d;
     background-color: pink;
-    height: 80vh;
+    height: auto;
 }
 .stop {
 background-color: yellow;
 grid-area: e;
-height: 40vh;
+height: auto;
 }
 .dod {
 background-color: yellow;
 grid-area: f;
-height: 40vh;
+height: auto;
 }
 .menu {
     grid-area: g;
     background-color: #99ccff;
-    height: 100vh;
+    height: auto;
   }
 .link {
     padding: 1rem;

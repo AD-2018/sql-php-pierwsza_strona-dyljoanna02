@@ -4,7 +4,7 @@
   }
   .container {
     background-color: rgb(50, 117, 205);
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -39,7 +39,7 @@
   .menu {
     grid-area: g;
     background-color: #99ccff;
-    height: 100vh;
+    height: auto;
   }
 .link {
     padding: 1rem;

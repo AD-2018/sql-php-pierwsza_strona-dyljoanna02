@@ -4,7 +4,7 @@
   }
   .container {
     background-color: rgb(50, 117, 205);
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -20,26 +20,27 @@
   .nawi {
       background-color: lightgreen;
       grid-area: b;
-      height: 35vh;
+      height: auto;
   }
   .glow {
       background-color: lightskyblue;
       grid-area: c;
-      height: 35vh;
+      height: auto;
   }
   .pob {
       background-color: pink;
       grid-area: e;
+      height: auto;
   }
   .stop {
       background-color: yellow;
       grid-area: d;
-      height: 30vh;
+      height: auto;
   }
   .menu {
     grid-area: g;
     background-color: #99ccff;
-    height: 100vh;
+    height: auto;
   }
 .link {
     padding: 1rem;
