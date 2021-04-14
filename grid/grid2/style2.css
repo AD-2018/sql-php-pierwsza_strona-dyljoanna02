@@ -3,7 +3,7 @@
 }
 .container {
     background-color: white;
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
