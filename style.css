@@ -67,10 +67,11 @@ a:hover, a:active {
   text-decoration: none;
   display: inline-block;
   width: 70%;
+  margin-left: -20px;
 }
 li {
   list-style-type: none;
-  margin-left: -20px;
+
 }
 .github {
   display: inline-block;
