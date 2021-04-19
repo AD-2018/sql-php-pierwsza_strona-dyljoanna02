@@ -11,11 +11,7 @@
 <body>
      <div class="container">
      <div class="menu blue">
-    <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-dyljoanna02">Github</a><br/><br/>
-    <a class="link" href="https://dyljoanna.herokuapp.com">Strona Glowna </a>
-    <a class="link" href="/pracownicy/orgPracownicy.php">Pracownicy i Organizacja </a>
-    <a class="link" href="/pracownicy/dataczas.php">Data i Czas </a>
-    <a class="link" href="/pracownicy/formularz.html">Formularz </a><br/>
+     <?php include_once("../menu.php"); ?>
     </div>
 <div class="tresc green">
 <?php
