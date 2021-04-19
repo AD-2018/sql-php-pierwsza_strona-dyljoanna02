@@ -71,8 +71,10 @@ a:hover, a:active {
 }
 li {
   list-style-type: none;
-
 }
 .github {
   display: inline-block;
+}
+.li {
+  list-style-type: none;
 }
