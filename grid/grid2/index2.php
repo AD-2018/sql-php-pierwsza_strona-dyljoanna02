@@ -29,11 +29,18 @@
       echo('<table border="1" class="tabelka_moja">');
       echo ("<tr><th>ID</th><th>PRAWNIK</th>");
       while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['id_praw']."</td><td>".$row['prawnik']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        echo ('<tr>');
+       echo('<td>'.$row['id'].'</td>'.'<td>'.$row['prawnik'].'</td>'.
+    
+             '<td>
+      <form action="delpraw.php" method="POST">
+            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="submit" value="USUŃ">
+          </form>
+      </td>');
+        echo ('</tr>');
+    }
+    echo ('</table>');
       ?>
       </div>
       <div class="nawi">
@@ -56,11 +63,18 @@
       echo('<table border="1" class="tabelka_moja">');
       echo ("<tr><th>ID</th><th>SPRAWA</th>");
       while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['id_spraw']."</td><td>".$row['sprawa']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        echo ('<tr>');
+       echo('<td>'.$row['id'].'</td>'.'<td>'.$row['sprawa'].'</td>'.
+    
+             '<td>
+      <form action="delspr.php" method="POST">
+            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="submit" value="USUŃ">
+          </form>
+      </td>');
+        echo ('</tr>');
+    }
+    echo ('</table>');
       ?>
       </div>
       <div class="pob">
@@ -69,7 +83,7 @@
       <div class="stop">
         <?php
         require_once("../../connect.php");
-      $sql = "SELECT prawnik, sprawa FROM prawnik, sprawa, prawnik_sprawa WHERE prawnik.id_praw = prawnik_sprawa.id_prawnik AND sprawa.id_spraw = prawnik_sprawa.id_sprawa";
+      $sql = "SELECT id_sad, prawnik, sprawa FROM prawnik, sprawa, prawnik_sprawa WHERE prawnik.id = prawnik_sprawa.id_prawnik AND sprawa.id = prawnik_sprawa.id_sprawa";
       echo("<h3>PRAWNICY I SPRAWY</h3>");
       echo("<li>".$sql."<br><br>");
       
@@ -81,17 +95,38 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>PRAWNIK</th><th>SPRAWA</th>");
-      while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['prawnik']."</td><td>".$row['sprawa']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+      echo ("<tr><th>ID</th><th>PRAWNIK</th><th>SPRAWA</th><th>USUWANIE</th></tr>");
+      while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id_sad'].'</td><td>'.$row['prawnik'].'</td><td>'.$row['sprawa'].'<td>
+        <form action="delpp.php" method="POST">
+         <input type="text" name="id" value="'.$row['id_sad'].'" hidden>
+          <input type="submit" value="USUŃ">
+   </form>
+   </td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
       ?>
       </div>
       <div class="dod">
-        7
+      <h3>Dodawanie Prawnika</h3>
+	<form action="dodpraw.php" method="POST">
+		<label>Prawnik: </label><input type="text" name="prawnik"></br>
+		<input type="submit" value="Dodaj Prawnika">
+	</form></br>
+  <h3>Dodawanie Sprawy</h3>
+	<form action="dodspr.php" method="POST">
+		<label>Projekt: </label><input type="text" name="sprawa"></br>
+		<input type="submit" value="Dodaj Sprawę">
+	</form></br>
+  <h3>Dodawanie Połączenia</h3>
+	<form action="dodpp.php" method="POST">
+		<label>ID Prawnik: </label><input type="text" name="praw"></br>
+    <label>ID Sprawa: </label><input type="text" name="spr"></br>
+		<input type="submit" value="Dodaj Połączenie">
+	</form>
     </div>
     </div>
   </body>

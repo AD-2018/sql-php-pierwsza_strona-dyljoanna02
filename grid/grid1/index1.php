@@ -80,12 +80,12 @@
 	<form action="dodprac.php" method="POST">
 		<label>Pracownik: </label><input type="text" name="pracownik"></br>
 		<input type="submit" value="Dodaj Pracownika">
-	</form>
+	</form></br>
   <h3>Dodawanie Projektu</h3>
 	<form action="dodproj.php" method="POST">
 		<label>Projekt: </label><input type="text" name="projekt"></br>
-		<input type="submit" value="Dodaj Autora">
-	</form>
+		<input type="submit" value="Dodaj Projekt">
+	</form></br>
   <h3>Dodawanie Połączenia</h3>
 	<form action="dodpp.php" method="POST">
 		<label>ID Pracownik: </label><input type="text" name="prac"></br>
@@ -117,7 +117,7 @@
                 echo('<td>'.$row['id_proj'].'</td><td>'.$row['pracownik'].'</td><td>'.$row['projekt'].'<td>
                 <form action="delpp.php" method="POST">
                  <input type="text" name="id" value="'.$row['id_proj'].'" hidden>
-                  <input type="submit" value="Usuń">
+                  <input type="submit" value="USUŃ">
            </form>
            </td>');
                 echo('</tr>');
