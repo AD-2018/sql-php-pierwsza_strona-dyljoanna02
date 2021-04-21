@@ -4,7 +4,7 @@ echo $_POST['id'];
 
 require_once("../../connect.php");
 
-$sql = "INSERT INTO osoba_rola (id_os, id_osoba, id_rola) 
+$sql = "INSERT INTO osoba_rola (id_inf, id_osoba, id_rola) 
 VALUES (null, '".$_POST['os']."', '".$_POST['rol']."')";
 
 
