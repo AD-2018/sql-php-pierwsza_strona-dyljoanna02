@@ -84,7 +84,7 @@
       <div class="stop">
         <?php
         require_once("../../connect.php");
-      $sql = "SELECT id_pol, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id_prac = pracownik_projekt.id_pracownik AND projekt.id_proj = pracownik_projekt.id_projekt";
+      $sql = "SELECT pracownik_projekt.id_pol, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id_prac = pracownik_projekt.id_pracownik AND projekt.id_proj = pracownik_projekt.id_projekt";
       echo("<h3>PRACOWNICY I PROJEKTY</h3>");
       echo("<li>".$sql."<br><br>");
       
