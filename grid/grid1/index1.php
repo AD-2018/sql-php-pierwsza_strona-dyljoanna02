@@ -96,7 +96,7 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>PRACOWNIK</th><th>PROJEKT</th><th>USUWANIE I DODAWANIE</th></tr>");
+      echo ("<tr><th>PRACOWNIK</th><th>PROJEKT</th><th>USUWANIE I DODAWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
           echo ("<td>".$row['pracownik']."</td><td>".$row['projekt']."</td>""<td>
@@ -107,35 +107,6 @@
           </td>");
           echo ('</tr>');
       }
-          echo ('<tr>');
-          echo ('<td>DODAWANIE:</td>');
-          echo ('<td>'); 
-          echo ('<form action="dodprac.php" method="POST">
-          <label for="pracownik">Wybierz ID pracownika:</label>
-          <select name="pracownik">');
-          while($row=mysqli_fetch_assoc($result)){
-          echo('<option value="'.$row['id_prac'].'">');
-          echo($row['id_prac']);
-          echo("</option>"); 
-    }
-echo('</select>');
-echo ('</td>');
-          echo ('<td>');
-          echo ('<form action="dodproj.php" method="POST">
-          <label for="projekt">Wybierz ID projektu:</label>
-          <select name="projekt">');
-          while($row=mysqli_fetch_assoc($result)){
-          echo('<option value="'.$row['id_proj'].'">');
-          echo($row['id_proj']);
-          echo("</option>"); 
-    }
-echo('</select>');
-ech('</td>');
-                  echo('<td>
-          <input type="submit" value="DODAJ">
-        </form>
-        </td>');
-          echo ('</tr>');
       echo ('</table>');
       ?>
       </div>
