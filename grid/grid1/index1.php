@@ -114,7 +114,7 @@
           <label for="pracownik">Wybierz ID pracownika:</br></label>
           <select name="pracownik">');
           while($row=mysqli_fetch_assoc($result)){
-          echo("<option value='.$row['id_prac'].'>");
+          echo('<option value="'.$row['id_prac'].'">');
           echo($row['id_prac']);
           echo("</option>"); 
     }
@@ -125,7 +125,7 @@ echo ('</td>');
           <label for="projekt">Wybierz ID projektu:</br></label>
           <select name="projekt">');
           while($row=mysqli_fetch_assoc($result)){
-          echo("<option value='.$row['id_proj'].'>");
+          echo('<option value="'.$row['id_proj'].'">');
           echo($row['id_proj']);
           echo("</option>"); 
     }
