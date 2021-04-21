@@ -111,7 +111,7 @@
           echo ('<td>DODAWANIE:</td>');
           echo ('<td>'); 
           echo ('<form action="dodprac.php" method="POST">
-          <label for="pracownik">Wybierz ID pracownika:</br></label>
+          <label for="pracownik">Wybierz ID pracownika:</label>
           <select name="pracownik">');
           while($row=mysqli_fetch_assoc($result)){
           echo('<option value="'.$row['id_prac'].'">');
@@ -122,7 +122,7 @@ echo('</select>');
 echo ('</td>');
           echo ('<td>');
           echo ('<form action="dodproj.php" method="POST">
-          <label for="projekt">Wybierz ID projektu:</br></label>
+          <label for="projekt">Wybierz ID projektu:</label>
           <select name="projekt">');
           while($row=mysqli_fetch_assoc($result)){
           echo('<option value="'.$row['id_proj'].'">');
