@@ -98,7 +98,7 @@
       <div class="stop">
       <?php
         require_once("../../connect.php");
-      $sql = "SELECT id, osoba, rola FROM osoba, rola, osoba_rola WHERE osoba.id = osoba_rola.id_osoba AND rola.id = osoba_rola.id_rola";
+      $sql = "SELECT id_inf, osoba, rola FROM osoba, rola, osoba_rola WHERE osoba.id = osoba_rola.id_osoba AND rola.id = osoba_rola.id_rola";
       echo("<h3>OSOBY I ROLE</h3>");
       echo("<li>".$sql."<br><br>");
       
@@ -113,11 +113,11 @@
       echo ("<tr><th>ID</th><th>OSOBA</th><th>ROLA</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
         echo ('<tr>');
-       echo('<td>'.$row['id'].'</td>'.'<td>'.$row['osoba'].'</td><td>'.$row['rola'].''.
+       echo('<td>'.$row['id_inf'].'</td>'.'<td>'.$row['osoba'].'</td><td>'.$row['rola'].''.
     
              '<td>
       <form action="delpp.php" method="POST">
-            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="hidden" name="id" value="'.$row['id_inf'].'">
             <input type="submit" value="USUŃ">
           </form>
       </td>');
