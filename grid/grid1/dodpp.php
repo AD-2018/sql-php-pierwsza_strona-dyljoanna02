@@ -1,10 +1,11 @@
 <?php
-echo("jestes w delpp.php <br>");
+echo("jestes w dodpp.php <br>");
 echo $_POST['id'];
 
 require_once("../../connect.php");
 
-$sql = "DELETE FROM pracownik_projekt WHERE id_pol=".$_POST['id_pol'];
+$sql = "INSERT INTO pracownik_projekt (id_pol, id_prac, id_proj) 
+VALUES (null, '".$_POST['id_prac']."', '".$_POST['id_proj']."')";
 
 
 echo $sql;
