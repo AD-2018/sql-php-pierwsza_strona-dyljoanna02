@@ -4,7 +4,7 @@ echo "<li>".$_POST['pracownik'];
 
 require_once("../../connect.php");
 
-$sql = "INSERT INTO pracownik (id_prac, pracownik) 
+$sql = "INSERT INTO pracownik (id, pracownik) 
        VALUES (null, '".$_POST['pracownik']."')";
 
 if ($conn->query($sql) === TRUE) {
