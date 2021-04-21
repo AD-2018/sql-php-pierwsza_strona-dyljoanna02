@@ -84,7 +84,7 @@
       <div class="stop">
         <?php
         require_once("../../connect.php");
-      $sql = "SELECT pracownik_projekt.id_pol, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id_prac = pracownik_projekt.id_pracownik AND projekt.id_proj = pracownik_projekt.id_projekt";
+      $sql = "SELECT id, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id_prac = pracownik_projekt.id_pracownik AND projekt.id_proj = pracownik_projekt.id_projekt";
       echo("<h3>PRACOWNICY I PROJEKTY</h3>");
       echo("<li>".$sql."<br><br>");
       
@@ -99,9 +99,9 @@
       echo ("<tr><th>ID</th><th>PRACOWNIK</th><th>PROJEKT</th><th>USUWANIE I DODAWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
           echo ('<tr>');
-          echo ("<td>".$row['id_pol']."</td><td>".$row['pracownik']."</td><td>".$row['projekt']."</td>""<td>
+          echo ("<td>".$row['id']."</td><td>".$row['pracownik']."</td><td>".$row['projekt']."</td>""<td>
           <form action='delpp.php' method='POST'>
-                <input type='hidden' name='id_pol' value='".$row['id_pol']."'>
+                <input type='hidden' name='id' value='".$row['id']."'>
                 <input type='submit' value='USUŃ'>
               </form>
           </td>");
