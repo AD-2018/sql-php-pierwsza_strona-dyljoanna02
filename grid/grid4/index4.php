@@ -27,13 +27,20 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>OSOBA</th>");
+      echo ("<tr><th>ID</th><th>OSOBA</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['id_os']."</td><td>".$row['osoba']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        echo ('<tr>');
+       echo('<td>'.$row['id'].'</td>'.'<td>'.$row['osoba'].'</td>'.
+    
+             '<td>
+      <form action="delos.php" method="POST">
+            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="submit" value="USUŃ">
+          </form>
+      </td>');
+        echo ('</tr>');
+    }
+    echo ('</table>');
       ?>
       </div>
       <div class="nawi">
@@ -54,22 +61,44 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>ROLA</th>");
+      echo ("<tr><th>ID</th><th>ROLA</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['id_rol']."</td><td>".$row['rola']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        echo ('<tr>');
+       echo('<td>'.$row['id'].'</td>'.'<td>'.$row['rola'].'</td>'.
+    
+             '<td>
+      <form action="delrol.php" method="POST">
+            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="submit" value="USUŃ">
+          </form>
+      </td>');
+        echo ('</tr>');
+    }
+    echo ('</table>');
       ?>
       </div>
       <div class="pob">
-        5
+      <h3>Dodawanie Osoby</h3>
+	<form action="dodos.php" method="POST">
+		<label>Osoba: </label><input type="text" name="osoba"></br>
+		<input type="submit" value="Dodaj Osobę">
+	</form></br>
+  <h3>Dodawanie Roli</h3>
+	<form action="dodrol.php" method="POST">
+		<label>Rola: </label><input type="text" name="rola"></br>
+		<input type="submit" value="Dodaj Rolę">
+	</form></br>
+  <h3>Dodawanie Połączenia</h3>
+	<form action="dodpp.php" method="POST">
+		<label>ID Osoba: </label><input type="text" name="os"></br>
+    <label>ID Rola: </label><input type="text" name="rol"></br>
+		<input type="submit" value="Dodaj Połączenie">
+	</form>
       </div>
       <div class="stop">
       <?php
         require_once("../../connect.php");
-      $sql = "SELECT osoba, rola FROM osoba, rola, osoba_rola WHERE osoba.id_os = osoba_rola.id_osoba AND rola.id_rol = osoba_rola.id_rola";
+      $sql = "SELECT id_os, osoba, rola FROM osoba, rola, osoba_rola WHERE osoba.id = osoba_rola.id_osoba AND rola.id = osoba_rola.id_rola";
       echo("<h3>OSOBY I ROLE</h3>");
       echo("<li>".$sql."<br><br>");
       
@@ -81,13 +110,20 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>OSOBA</th><th>ROLA</th>");
+      echo ("<tr><th>ID</th><th>OSOBA</th><th>ROLA</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['osoba']."</td><td>".$row['rola']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        echo ('<tr>');
+       echo('<td>'.$row['id_os'].'</td>'.'<td>'.$row['osoba'].'</td><td>'.$row['rola'].''.
+    
+             '<td>
+      <form action="delpp.php" method="POST">
+            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="submit" value="USUŃ">
+          </form>
+      </td>');
+        echo ('</tr>');
+    }
+    echo ('</table>');
       ?>
       </div>
     </div>
