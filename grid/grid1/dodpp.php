@@ -4,8 +4,8 @@ echo $_POST['id'];
 
 require_once("../../connect.php");
 
-$sql = "INSERT INTO pracownik_projekt (id_pol, id_prac, id_proj) 
-VALUES (null, '".$_POST['id_prac']."', '".$_POST['id_proj']."')";
+$sql = "INSERT INTO pracownik_projekt (id_proj, id_pracownik, id_projekt) 
+VALUES (null, '".$_POST['prac']."', '".$_POST['proj']."')";
 
 
 echo $sql;

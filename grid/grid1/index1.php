@@ -76,7 +76,22 @@
       ?>
       </div>
       <div class="glow">
-        3
+      <h3>Dodawanie Pracownika</h3>
+	<form action="dodprac.php" method="POST">
+		<label>Pracownik: </label><input type="text" name="pracownik"></br>
+		<input type="submit" value="Dodaj Pracownika">
+	</form>
+  <h3>Dodawanie Projektu</h3>
+	<form action="dodproj.php" method="POST">
+		<label>Projekt: </label><input type="text" name="projekt"></br>
+		<input type="submit" value="Dodaj Autora">
+	</form>
+  <h3>Dodawanie Połączenia</h3>
+	<form action="dodpp.php" method="POST">
+		<label>ID Pracownik: </label><input type="text" name="prac"></br>
+    <label>ID Projekt: </label><input type="text" name="proj"></br>
+		<input type="submit" value="Dodaj Połączenie">
+	</form>
       </div>
       <div class="pob">
         5
