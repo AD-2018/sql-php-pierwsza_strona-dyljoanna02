@@ -4,7 +4,7 @@ echo $_POST['id'];
 
 require_once("../../connect.php");
 
-$sql = "DELETE FROM pracownik_projekt WHERE id=".$_POST['id'];
+$sql = "DELETE FROM pracownik_projekt WHERE id_proj=".$_POST['id'];
 
 
 echo $sql;

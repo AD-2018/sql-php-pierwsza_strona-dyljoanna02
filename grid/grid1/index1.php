@@ -84,30 +84,31 @@
       <div class="stop">
         <?php
         require_once("../../connect.php");
-      $sql = "SELECT pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id_prac = pracownik_projekt.id_pracownik AND projekt.id_proj = pracownik_projekt.id_projekt";
-      echo("<h3>PRACOWNICY I PROJEKTY</h3>");
-      echo("<li>".$sql."<br><br>");
-      
-      $result = mysqli_query($conn, $sql);
-           if ( $result) {
-              echo "<li>ok";
-          } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-          }
-      
-      echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>PRACOWNIK</th><th>PROJEKT</th><th>USUWANIE I DODAWANIE</th></tr>");
-      while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['pracownik']."</td><td>".$row['projekt']."</td>""<td>
-          <form action='delpp.php' method='POST'>
-                <input type='hidden' name='id' value='".$row['id']."'>
-                <input type='submit' value='USUŃ'>
-              </form>
-          </td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        $sql = "SELECT id_proj, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id_prac = pracownik_projekt.id_pracownik AND projekt.id_proj = pracownik_projekt.id_projekt";
+        echo($sql);
+        
+        $result = mysqli_query($conn, $sql);
+        if ( $result) {
+                echo "<li>ok";
+            } else {
+              echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        
+        echo('<table border="1">');
+            echo('<th>ID</th><th>PRACOWNIK</th><th>PROJEKT</th><th>USUWANIE</th>');
+        
+            while($row=mysqli_fetch_assoc($result)){
+                echo('<tr>');
+                echo('<td>'.$row['id_proj'].'</td><td>'.$row['pracownik'].'</td><td>'.$row['projekt'].'<td>
+                <form action="delpp.php" method="POST">
+                 <input type="text" name="id" value="'.$row['id_proj'].'" hidden>
+                  <input type="submit" value="Usuń">
+           </form>
+           </td>');
+                echo('</tr>');
+            }
+        
+        echo('</table>');
       ?>
       </div>
       
