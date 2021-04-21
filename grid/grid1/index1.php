@@ -101,8 +101,8 @@
           echo ('<tr>');
           echo ("<td>".$row['pracownik']."</td><td>".$row['projekt']."</td>"."<td>
           <form action='delpp.php' method='POST'>
-                <input type='hidden' name='prac' value='".$row['pracownik']."'>
-                <input type='hidden' name='proj' value='".$row['projekt']."'>
+                <input type='hidden' name='pracownik' value='".$row['pracownik']."'>
+                <input type='hidden' name='projekt' value='".$row['projekt']."'>
                 <input type='submit' value='USUŃ'>
               </form>
           </td>");
