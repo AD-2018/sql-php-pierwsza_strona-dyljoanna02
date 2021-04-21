@@ -27,13 +27,20 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>PRODUCENT</th>");
+      echo ("<tr><th>ID</th><th>PRODUCENT</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['id_prod']."</td><td>".$row['producent']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        echo ('<tr>');
+       echo('<td>'.$row['id'].'</td>'.'<td>'.$row['producent'].'</td>'.
+    
+             '<td>
+      <form action="delprod.php" method="POST">
+            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="submit" value="USUŃ">
+          </form>
+      </td>');
+        echo ('</tr>');
+    }
+    echo ('</table>');
       ?>
       </div>
       <div class="nawi">
@@ -54,19 +61,26 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>PRODUKT</th>");
+      echo ("<tr><th>ID</th><th>PRODUKT</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['id_produkt']."</td><td>".$row['produkt']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+        echo ('<tr>');
+       echo('<td>'.$row['id'].'</td>'.'<td>'.$row['produkt'].'</td>'.
+    
+             '<td>
+      <form action="delprodukt.php" method="POST">
+            <input type="hidden" name="id" value="'.$row['id'].'">
+            <input type="submit" value="USUŃ">
+          </form>
+      </td>');
+        echo ('</tr>');
+    }
+    echo ('</table>');
       ?>
       </div>
       <div class="pob">
       <?php
         require_once("../../connect.php");
-      $sql = "SELECT producent, produkt FROM producent, produkt, producent_produkt WHERE producent.id_prod = producent_produkt.id_producent AND produkt.id_produkt = producent_produkt.id_produkt";
+      $sql = "SELECT id_prod, producent, produkt FROM producent, produkt, producent_produkt WHERE producent.id = producent_produkt.id_producent AND produkt.id = producent_produkt.id_produkt";
       echo("<h3>PRODUCENCI I PRODUKTY</h3>");
       echo("<li>".$sql."<br><br>");
       
@@ -78,17 +92,38 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>PRODUCENT</th><th>PRODUKT</th>");
-      while($row = mysqli_fetch_assoc($result)) {
-          echo ('<tr>');
-          echo ("<td>".$row['producent']."</td><td>".$row['produkt']."</td>");
-          echo ('</tr>');
-      }
-      echo ('</table>');
+      echo ("<tr><th>ID</th><th>PRODUCENT</th><th>PRODUKT</th><th>USUWANIE</th></tr>");
+      while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id_prod'].'</td><td>'.$row['producent'].'</td><td>'.$row['produkt'].'<td>
+        <form action="delpp.php" method="POST">
+         <input type="text" name="id" value="'.$row['id_prod'].'" hidden>
+          <input type="submit" value="USUŃ">
+   </form>
+   </td>');
+        echo('</tr>');
+    }
+
+echo('</table>');
       ?>
       </div>
       <div class="stop">
-      4
+      <h3>Dodawanie Poducenta</h3>
+	<form action="dodprod.php" method="POST">
+		<label>Producent: </label><input type="text" name="producent"></br>
+		<input type="submit" value="Dodaj Producenta">
+	</form></br>
+  <h3>Dodawanie Produktu</h3>
+	<form action="dodprodukt.php" method="POST">
+		<label>Produkt: </label><input type="text" name="produkt"></br>
+		<input type="submit" value="Dodaj Produkt">
+	</form></br>
+  <h3>Dodawanie Połączenia</h3>
+	<form action="dodpp.php" method="POST">
+		<label>ID Producent: </label><input type="text" name="prod"></br>
+    <label>ID Produkt: </label><input type="text" name="produkt"></br>
+		<input type="submit" value="Dodaj Połączenie">
+	</form>
       </div>
     </div>
   </body>

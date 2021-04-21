@@ -27,7 +27,7 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>PRAWNIK</th>");
+      echo ("<tr><th>ID</th><th>PRAWNIK</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
         echo ('<tr>');
        echo('<td>'.$row['id'].'</td>'.'<td>'.$row['prawnik'].'</td>'.
@@ -61,7 +61,7 @@
           }
       
       echo('<table border="1" class="tabelka_moja">');
-      echo ("<tr><th>ID</th><th>SPRAWA</th>");
+      echo ("<tr><th>ID</th><th>SPRAWA</th><th>USUWANIE</th></tr>");
       while($row = mysqli_fetch_assoc($result)) {
         echo ('<tr>');
        echo('<td>'.$row['id'].'</td>'.'<td>'.$row['sprawa'].'</td>'.

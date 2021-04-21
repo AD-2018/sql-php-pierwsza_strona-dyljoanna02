@@ -9,7 +9,7 @@ $sql = "INSERT INTO sprawa (id, sprawa)
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
-  header('Location:https://dyljoanna.herokuapp.com/grid/grid1/index1.php');
+  header('Location:https://dyljoanna.herokuapp.com/grid/grid2/index2.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
