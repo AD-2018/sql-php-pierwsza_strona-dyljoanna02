@@ -30,11 +30,11 @@
           echo ("<tr><th>ID</th><th>PRACOWNIK</th><th>USUWANIE</th></tr>");
           while($row = mysqli_fetch_assoc($result)) {
               echo ('<tr>');
-             echo('<td>'.$row['id_prac'].'</td>'.'<td>'.$row['pracownik'].'</td>'.
+             echo('<td>'.$row['id'].'</td>'.'<td>'.$row['pracownik'].'</td>'.
           
                    '<td>
             <form action="delprac.php" method="POST">
-                  <input type="hidden" name="id_prac" value="'.$row['id_prac'].'">
+                  <input type="hidden" name="id" value="'.$row['id'].'">
                   <input type="submit" value="USUŃ">
                 </form>
             </td>');
@@ -62,11 +62,11 @@
           echo ("<tr><th>ID</th><th>PROJEKT</th><th>USUWANIE</th></tr>");
           while($row = mysqli_fetch_assoc($result)) {
               echo ('<tr>');
-             echo('<td>'.$row['id_proj'].'</td>'.'<td>'.$row['projekt'].'</td>'.
+             echo('<td>'.$row['id'].'</td>'.'<td>'.$row['projekt'].'</td>'.
           
                    '<td>
             <form action="delproj.php" method="POST">
-                  <input type="hidden" name="id_proj" value="'.$row['id_proj'].'">
+                  <input type="hidden" name="id" value="'.$row['id'].'">
                   <input type="submit" value="USUŃ">
                 </form>
             </td>');
@@ -84,7 +84,7 @@
       <div class="stop">
         <?php
         require_once("../../connect.php");
-        $sql = "SELECT id_proj, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id_prac = pracownik_projekt.id_pracownik AND projekt.id_proj = pracownik_projekt.id_projekt";
+        $sql = "SELECT id_proj, pracownik, projekt FROM pracownik, projekt, pracownik_projekt WHERE pracownik.id = pracownik_projekt.id_pracownik AND projekt.id = pracownik_projekt.id_projekt";
         echo($sql);
         
         $result = mysqli_query($conn, $sql);
